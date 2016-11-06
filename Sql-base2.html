@@ -1,0 +1,395 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>金禾植保信息大数据</title>
+<!-- InstanceEndEditable -->
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html" class="selectweb">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>	
+                     <a href="base.html">知识库</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain" style="padding:20px">
+    	<div class="configureMainbox">
+		<!-- InstanceBeginEditable name="mybody" -->
+		<div class="configureContenttitlebox">
+        	<div class="configureContentlefttitle floatleft">
+            	<img src="img/menutitle.jpg"/> 功能菜单
+            </div>
+            <div class="configureContentrighttitle floatleft">
+            	<span class="absoluteTitle">知识库管理</span>
+            </div>
+        </div>
+        <div class="configureContentmainbox">
+        	<div class="configureContentleftmain">
+            	<ul>
+                	<li><a href="Sql-connect.html">数据库链接</a></li>
+                    <li><a href="Sql-configure.html">数据源配置</a></li>
+                    <li><a href="Sql-assembly.html">组件配置</a></li>
+                    <li><a href="Sql-exhibition.html">组件展示</a></li>
+                    <li><a href="classification.html">组件分组</a></li>
+                    <li><a href="Sql-base.html" class="selectleftmenu">知识库管理</a></li>
+                </ul>
+            </div>
+            <div class="configureContentrightmain">
+                <div style="border:1px solid #9BC7F7; background:#EDF9FE; width:940px; margin:0 auto; padding:10px">
+                    注意：其中" * "为必填项。
+                </div>
+                <div style="padding:30px; padding-top:0; padding-bottom:0">
+                    <div class="help_h3 backcolor">
+                        <div class="floatleft help_h3 ppd10" style=" min-width:10%">基本信息</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="border:1px dashed #F8D376; background:#FDF8E3; padding:10px; margin-bottom:5px">
+                        <table class="yogurt_table_rq2 jianyitablebox-table" style="width:900px">
+                            <tbody>
+                                <tr>
+                                    <td width="130" align="right">所属农作物：</td>
+                                    <td>
+                                       <select style="width:400px; display:inline-block" class="form-control">
+                                        <option>水稻</option>
+                                        <option>蔬菜</option>
+                                       </select> *
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">病虫害种类：</td>
+                                    <td>
+                                     <select style="width:400px; display:inline-block" class="form-control">
+                                        <option>病害</option>
+                                        <option>虫害</option>
+                                        <option>草害</option>
+                                        <option>鼠害</option>
+                                      </select> *
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">中文名：</td>
+                                    <td>
+                                       <input style="width:400px; display:inline-block" type="text" class="form-control inputClass" value="水稻稻瘟病"> *
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">英文名：</td>
+                                    <td>
+                                       <input style="width:400px" type="text" class="form-control inputClass" value="Rice blast">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">学名：</td>
+                                    <td>
+                                      <input style="width:400px" type="text" class="form-control inputClass" value="灰梨孢Pyricularia grisea(Cooke)Sacc">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">分类：</td>
+                                    <td>
+                                       <input style="width:400px" type="text" class="form-control inputClass" value="水稻病害">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">别名：</td>
+                                    <td>
+                                      <input style="width:400px" type="text" class="form-control inputClass" value="稻热病、火烧瘟、叩头瘟、吊颈瘟">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">简介：</td>
+                                    <td>
+                                        <textarea class="form-control" style="width:750px; height:100px">稻瘟病是水稻重要病害之一，可引起大幅度减产，严重时减产40%～50%，甚至颗粒无收。世界各稻区均匀发生。本病在各地均有发生，其中以叶部、节部发生为多，发生后可造成不同程度减产，尤其穗颈瘟或节瘟发生早而重，可造成白穗以致绝产。近年来，广东稻瘟病年发生面积不少于50万亩，而且出现逐年增加趋势，局部大爆发并不少见，目前，稻瘟病可能发生在省域内的任何年头、任何季节。</textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                       </table>
+                    </div>
+                    <div class="help_h3 backcolor">
+                        <div class="floatleft help_h3 ppd10" style=" min-width:10%">发生动态</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="border:1px dashed #75E1F9; background:#EDF9FE; padding:10px; margin-bottom:5px">
+                        <table class="yogurt_table_rq2 jianyitablebox-table" style="width:900px">
+                            <tbody>
+                                <tr>
+                                    <td width="130" align="right">图片：</td>
+                                    <td>
+                                       发生动态相关文件1.jpg,发生动态相关文件2.. (共2张)<button class="btn btn-warning btn-sm" onclick="openwindall(1)">更改</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">说明：</td>
+                                    <td>
+                                        <textarea class="form-control" style="width:750px; height:100px">主要为害叶片、茎秆、穗部。因为害时期、部位不同分为苗瘟、叶瘟、节瘟、穗颈瘟、谷粒瘟。苗瘟发生于三叶前，由种子带菌所致。病苗基部灰黑，上部变褐，卷缩而死，湿度较大时病部产生大量灰黑色霉层，即病原菌分生孢子梗和分生孢子。叶瘟在整个生育期都能发生。分蘖至拔节期为害较重。</textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                       </table>
+                    </div>
+                    <div class="help_h3 backcolor">
+                        <div class="floatleft help_h3 ppd10" style=" min-width:10%">发生特征</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="border:1px dashed #75E1F9; background:#EDF9FE; padding:10px; margin-bottom:5px">
+                        <table class="yogurt_table_rq2 jianyitablebox-table" style="width:900px">
+                            <tbody>
+                                <tr>
+                                    <td width="130" align="right">图片：</td>
+                                    <td>
+                                       <button class="btn btn-success btn-sm" onclick="openwindall(1)">上传新图片</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">说明：</td>
+                                    <td>
+                                        <textarea class="form-control" style="width:750px; height:100px">Phyricularia grisea （Cooke）Sacc.称灰梨孢=Pyricularia oryae Cav.称稻梨孢，属半知菌亚门真菌。有性态为Magnaporthe grisea （Hebert）Barrnov.属子囊菌亚门真菌。自然条件下尚未发现。分生孢子梗不分枝，3-5根丛生，从寄主表皮或气孔伸出，大小80-160×4-6（μm），具2-8个隔膜，基部稍膨大，淡褐色，向上色淡，顶端曲状，上生分生孢子。分生孢子无色，洋梨形或棍棒形，常有1-3个隔膜，大小14-40×6-14（μm），基部有脚胞，萌发时两端细胞立生芽管，芽管顶端产生附着胞，近球形，深褐色，紧贴附于寄主，产生生侵入丝侵入寄主组织内。该菌可分做7群，128个生理小种。
+        </textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                       </table>
+                    </div>
+                    <div class="help_h3 backcolor">
+                        <div class="floatleft help_h3 ppd10" style=" min-width:10%">病原菌特征</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="border:1px dashed #75E1F9; background:#EDF9FE; padding:10px; margin-bottom:5px">
+                        <table class="yogurt_table_rq2 jianyitablebox-table" style="width:900px">
+                            <tbody>
+                                <tr>
+                                    <td width="130" align="right">图片：</td>
+                                    <td>
+                                       <button class="btn btn-success btn-sm" onclick="openwindall(1)">上传新图片</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">说明：</td>
+                                    <td>
+                                        <textarea class="form-control" style="width:750px; height:100px">稻瘟病是真菌寄生引起，青灰色霉即是病菌的分生孢子，病害的扩展靠分生孢子在空气中传播。病菌发育最适温度为25℃～28℃，高湿有利分生孢子形成飞散和萌发，而高湿度持续达一昼夜以上，则有利于病害发生流行。
+        </textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                       </table>
+                    </div>
+                    <div class="help_h3 backcolor">
+                        <div class="floatleft help_h3 ppd10" style=" min-width:10%">危害症状</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="border:1px dashed #75E1F9; background:#EDF9FE; padding:10px; margin-bottom:5px">
+                        <table class="yogurt_table_rq2 jianyitablebox-table" style="width:900px">
+                            <tbody>
+                                <tr>
+                                    <td width="130" align="right">图片：</td>
+                                    <td>
+                                       <button class="btn btn-success btn-sm" onclick="openwindall(1)">上传新图片</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">说明：</td>
+                                    <td>
+                                        <textarea class="form-control" style="width:750px; height:100px">稻瘟病在整个水稻生育期都会发生，根据受害时期和部位的不同，可分为苗瘟、叶瘟、节瘟、穗颈瘟和谷粒瘟等，其中以穗颈瘟对产量影响最大。</textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                       </table>
+                    </div>
+                    <div class="help_h3 backcolor">
+                        <div class="floatleft help_h3 ppd10" style=" min-width:10%">寄主</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="border:1px dashed #75E1F9; background:#EDF9FE; padding:10px; margin-bottom:5px">
+                        <table class="yogurt_table_rq2 jianyitablebox-table" style="width:900px">
+                            <tbody>
+                               <tr>
+                                    <td width="130" align="right">图片：</td>
+                                    <td>
+                                       <button class="btn btn-success btn-sm" onclick="openwindall(1)">上传新图片</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">说明：</td>
+                                    <td>
+                                        <textarea class="form-control" style="width:750px; height:100px">主要为水稻</textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                       </table>
+                    </div>
+                    <div class="help_h3 backcolor">
+                        <div class="floatleft help_h3 ppd10" style=" min-width:10%">发生分布</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="border:1px dashed #75E1F9; background:#EDF9FE; padding:10px; margin-bottom:5px">
+                        <table class="yogurt_table_rq2 jianyitablebox-table" style="width:900px">
+                            <tbody>
+                                <tr>
+                                    <td width="130" align="right">图片：</td>
+                                    <td>
+                                       <button class="btn btn-success btn-sm" onclick="openwindall(1)">上传新图片</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">说明：</td>
+                                    <td>
+                                        <textarea class="form-control" style="width:750px; height:100px">近年来，广东稻瘟病年发生面积不少于50万亩，而且出现逐年增加趋势，局部大爆发并不少见，目前，稻瘟病可能发生在省域内的任何年头、任何季节。
+        南方农村报记者通过调查发现，近年，发病严重的水稻品种，有一些是已经通过国家或者省级农业部门审定合格的高抗稻瘟病品种，其中杂交水稻组合发病尤其严重，如天优998、特优452、内香优3号等。仅今年内早造稻瘟病发生较大面积的地方就有怀集内香优3号，128亩；紫金天优998，325亩；电白天优368，230亩……</textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                       </table>
+                    </div>
+                    <div class="help_h3 backcolor">
+                        <div class="floatleft help_h3 ppd10" style=" min-width:10%">防治方法</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="border:1px dashed #75E1F9; background:#EDF9FE; padding:10px; margin-bottom:5px">
+                        <table class="yogurt_table_rq2 jianyitablebox-table" style="width:900px">
+                            <tbody>
+                                <tr>
+                                    <td width="130" align="right">图片：</td>
+                                    <td>
+                                       <button class="btn btn-success btn-sm" onclick="openwindall(1)">上传新图片</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="130" align="right">说明：</td>
+                                    <td>
+                                        <textarea class="form-control" style="width:750px; height:100px">用56℃温汤浸种5分钟，可预防苗瘟病发生。
+        防治方法：
+        1、方案一：将稻瘟康或稻瘟康Ⅱ号按500倍液稀释，进行全株均匀喷雾，以不滴水为宜，7天用药一次。
+        2、方案二：病情严重时，用稻瘟康35ml+稻瘟康Ⅱ号35ml兑水15公斤，均匀喷雾全株，7天用药一次。
+        （二）预防方法：
+        将稻瘟康或稻瘟康Ⅱ号按500倍液稀释，进行全株均匀喷雾，以不滴水为宜，7天用药一次。
+        （三）用药时间：下午4点后。
+        （1）浸种剂：
+        10%抗菌剂401 乳油1000倍液
+        80%抗菌剂402 乳油8000倍液
+        浸种48—72小时，不需淘洗即可催芽。
+        （2）喷施：
+        20%井冈霉素可湿性粉剂1000倍液
+        10%抗菌剂401 乳油1000倍液
+        80%抗菌剂402 乳油8000倍液
+        2%春雷霉素水剂500倍液</textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                       </table>
+                    </div>
+                </div>
+                
+                
+                <div class="text-center" style="height:60px; line-height:60px">
+                  <button class="btn btn-success" onclick="gotoplay()">确定</button>	
+                  <script>
+                    function gotoplay(){
+                        window.location.href="Sql-base.html"	
+                    }
+                  </script>
+                  <button class="btn btn-warning">取消</button>	
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    	
+        
+        
+        
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog yogurt_modal" style="width:900px;heigth:600px;">
+            <div class="modal-content" id="draggable">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" style="font-size:16px; text-align:center; line-height:30px; font-weight:bold">图片管理</h4>
+              </div>
+              <div class="modal-body yogurt_modal-body" style="font-size:16px; text-align:left; line-height:30px; padding-top:0; padding-bottom:20px">
+                 <table class="table table-striped table-bordered" style="margin-top:20px; margin-bottom:0">
+                    <tbody><tr>
+                        <td>编号</td>
+                        <td>缩略图</td>
+                        <td>名称</td>
+                        <td>来源名称</td>
+                        <td>操作	</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="img/zsk/dwb/dwb1.jpg" width="100" height="45">
+                        </td>
+                        <td>稻瘟病相关图片1</td>
+                        <td>daowenbing.jpg</td>
+                        <td><a href="#">编辑</a> <a href="#">删除</a></td>
+                    </tr>
+                    <tr id="mytabletr">
+                        <td>2</td>
+                        <td>
+                            <img src="img/zsk/dwb/dwb1.jpg" width="100" height="45">
+                        </td>
+                        <td>稻瘟病相关图片1</td>
+                        <td>daowenbing.jpg</td>
+                        <td><a href="#">编辑</a> <a href="#">删除</a></td>
+                    </tr>
+                 </tbody></table>
+              </div>
+              <div class="modal-footer" style="text-align:center; margin-top:0">
+                <button type="button" class="btn btn-warning" onclick="addsc()">上传新图片</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+              </div>
+              <script>
+                    function addsc(){$("#mytabletr").after("<tr><td>3</td><td><img src='img/zutp.jpg' width='100' height='45'/></td><td><input type='text' class='form-control'/></td><td><input type='file' /></td><td><a href='#'>保存</a> <a href='#'>删除</a></td></tr>")}
+              </script>
+            </div>
+          </div>
+        </div>
+        <!-- InstanceEndEditable -->
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+        copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div>
+</body>
+<!-- InstanceEnd --></html>

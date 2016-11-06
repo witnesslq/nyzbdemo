@@ -1,0 +1,578 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大数据-定制</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/docs.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html">数据运营平台</a>		
+                     <a href="openplatform.html" class="selectweb">云数据开放平台</a>		
+                     <a href="base.html">知识库</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain" style="margin-top:20px">
+    	<div class="configureMainbox">
+        <!--body开始-->
+            <div class="shoppingcart_box">
+                <div class="floatleft apileftbox" style="min-height:760px; padding:5px; width:20%">
+                     <div class="panel panel-default">
+                       <div class="panel-heading"><a href="#wodexinxi">我的信息</a></div>
+                       <table class="table table-hover table-bordered">
+                        <tbody>
+                          <tr>
+                            <td><a href="#wodexinxi">查看API密钥和用户ID</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="panel panel-default">
+                       <div class="panel-heading"><a href="#kaishi">开始</a></div>
+                       <table class="table table-hover table-bordered">
+                        <tbody>
+                          <tr>
+                            <td><a href="#kaishi">心知天气支持的全球城市</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#kaishi">如何使用更安全的签名验证方式</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#kaishi">如何使用JSONP方式调用</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#kaishi">关于返回值单位的说明</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#kaishi">天气现象代码说明</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="panel panel-default">
+                       <div class="panel-heading"><a href="#tianqi">天气</a></div>
+                       <table class="table table-hover table-bordered">
+                        <tbody>
+                          <tr>
+                            <td><a href="#tianqi">天气实况</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#tianqi">逐日预报和历史</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#tianqi">24小时逐小时预报</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#tianqi">过去24小时天气历史记录</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#tianqi">气象灾害预警</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="panel panel-default">
+                       <div class="panel-heading"><a href="#tianqi">空气质量</a></div>
+                       <table class="table table-hover table-bordered">
+                        <tbody>
+                          <tr>
+                            <td><a href="#tianqi">空气质量实况</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#tianqi">空气质量实况城市排行</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#tianqi">新空气质量实况城市排行</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#tianqi">逐日空气质量预报</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#tianqi">逐小时空气质量预报</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#tianqi">过去24小时空气质量历史记录报</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="panel panel-default">
+                       <div class="panel-heading"><a href="#zhuriyubao">生活</a></div>
+                       <table class="table table-hover table-bordered">
+                        <tbody>
+                          <tr>
+                            <td><a href="#zhuriyubao">生活指数</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#zhuriyubao">农历、节气、生肖</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#zhuriyubao">机动车尾号限行</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="panel panel-default">
+                       <div class="panel-heading"><a href="#zhuriyubao">生活</a></div>
+                       <table class="table table-hover table-bordered">
+                        <tbody>
+                          <tr>
+                            <td><a href="#zhuriyubao">生活指数</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#zhuriyubao">农历、节气、生肖</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#zhuriyubao">机动车尾号限行</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+                <div class="shoppingcart_board floatleft apibox" id="shoucang" style="width:80%">
+                	<!--欢迎使用-->
+                 	<div class="panel panel-default">
+                       <div class="panel-heading"><a href="#">什么是云数据开放平台？</a></div>
+                       <div class="apiboxbody" style="text-indent:2em">
+                           <p><img src="img/api.jpg" width="150" height="90"/>基于互联网的应用正变得越来越普及，在这个过程中，有更多的站点将自身的资源开放给开发者来调用。对外提供的API 调用使得站点之间的内容关联性更强，同时这些开放的平台也为用户、开发者和中小网站带来了更大的价值。
+开放是目前的发展趋势，越来越多的产品走向开放。目前的网站不能靠限制用户离开来留住用户，开放的架构反而更增加了用户的粘性。在Web 2.0的浪潮到来之前，开放的API 甚至源代码主要体现在桌面应用上，而现在越来越多的Web应用面向开发者开放了API。</p>
+                       </div>
+                    </div>  
+                    <!--欢迎使用end-->
+                	<!--我的信息-->
+                 	<div class="panel panel-default">
+                       <div class="panel-heading"><a href="#">我的信息</a></div>
+                       <div class="apiboxbody">
+                           <p><strong>我的API密钥</strong>：<button type="button" class="btn btn-success btn-xs"  onClick="openwindall(1)">登录后查看</button></p>
+                           <p>API密钥（key）是用来验证API请求合法性的一个唯一字符串，通过API请求中的key参数传入。</p>
+                           <p><strong>我的用户ID</strong>：<button type="button" class="btn btn-success btn-xs"  onClick="openwindall(1)">登录后查看</button></p>
+                           <p>用户ID是在注册心知会员时系统自动分配的一个随机10位的字符串，如U123456789。用户ID会被使用在签名验证方式中。</p>
+                       </div>
+                    </div>  
+                    <!--我的信息end-->
+                    <!--开始-->
+                    <div class="panel panel-default" id="kaishi">
+                       <div class="panel-heading"><a href="#">开始</a></div>
+                       <div class="apiboxbody">
+                           <h1>心知天气支持的全球城市</h1>
+                           <p>心知天气支持全球24,373个城市和地点（<a href="#">城市列表下载</a>）！下面的交互地图中的每个亮点就是其中一个。而这仅仅只是开始，我们会继续增加更多的地点点亮地球的每个城市每个角落。</p>
+                           <!--引用百度地图API-->
+                            <style type="text/css">
+                                html,body{margin:0;padding:0;}
+                                .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+                                .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+                            </style>
+                            <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+                            <div style="width:905px;height:270px;border:#ccc solid 1px;" id="dituContent"></div>
+                            <script type="text/javascript">
+                                //创建和初始化地图函数：
+                                function initMap(){
+                                    createMap();//创建地图
+                                    setMapEvent();//设置地图事件
+                                    addMapControl();//向地图添加控件
+                                }
+                                
+                                //创建地图函数：
+                                function createMap(){
+                                    var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                                    var point = new BMap.Point(115.983718,40.165939);//定义一个中心点坐标
+                                    map.centerAndZoom(point,8);//设定地图的中心点和坐标并将地图显示在地图容器中
+                                    window.map = map;//将map变量存储在全局
+                                }
+                                
+                                //地图事件设置函数：
+                                function setMapEvent(){
+                                    map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                                    map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                                    map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                                    map.enableKeyboard();//启用键盘上下左右键移动地图
+                                }
+                                
+                                //地图控件添加函数：
+                                function addMapControl(){
+                                    //向地图中添加缩放控件
+                                var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+                                map.addControl(ctrl_nav);
+                                    //向地图中添加缩略图控件
+                                var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+                                map.addControl(ctrl_ove);
+                                    //向地图中添加比例尺控件
+                                var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                                map.addControl(ctrl_sca);
+                                }
+                                
+                                
+                                initMap();//创建和初始化地图
+                            </script>
+                           <!--引用百度地图API-->
+                           <button type="button" class="btn btn-danger btn-sm">查看全屏地图</button><br/><br/>
+                           <button type="button" class="btn btn-success">V3版本城市列表下载</button>
+                           
+                       	   <hr/>
+                       	   <h1>如何使用更安全的签名验证方式：</h1>
+                           <p>使用签名验证方式是通过HMAC-SHA1对请求参数加密后得到的签名字串进行身份验证，避免了将API密钥（key）明文包含在请求中而造成泄露。签名的生成方式如下：</p>
+                           <ul class="apiul">
+                              <li><strong>构造验证参数字符串 </strong>将请求参数按照参数名字典升序排列后，把所有参数param=value用&连接起来，即类似URI中Query string的构造方式。目前支持的参数有：UNIX时间戳ts（单位为秒），签名失效时间ttl（可选）和用户IDuid。构造好的参数字符串例如：ts=1443079775&ttl=30&uid=U123456789</li>
+                              <li><strong>使用HMAC-SHA1方式，以API密钥（key）对上一步生成的参数字符串进行加密。 </strong>常见程序语言通常会内置加密函数，或通过扩展库提供支持。例如在NodeJS中，您可以使用crypto模块中的中的createHmac函数，例如crypto.createHmac(‘sha1’, key)。</li>
+                              <li><strong>将上一步生成的加密串用base64编码后得到签名sig，并作为请求的一个参数发送。 </strong>假设您的key是"secret"，以上参数加密后得到的sig参数为p5ylBUpICloq82b4+Td4XzACHjU= 这一部分请求参数即为ts=1443079775&ttl=30&uid=U123456789&sig=dTYeoN8WdOfW4PiwgEdLa0gWFzo= 请求中的其它参数，例如location,language 不参与签名。</li>
+                          </ul>
+                          <div class="bs-callout bs-callout-danger" id="callout-btndropdown-dependency">
+                                <h4>注意：</h4>
+                                <ul class="apiul">
+                                  <li>签名失效时间参数ttl是可选参数。如果忽略这个参数，生成的签名有效期默认为30分钟。较短的有效期可以使签名更难被盗用。</li>
+                                  <li>请参看这个说明查看API密钥和用户ID</li>
+                                </ul>
+                           </div>	
+                           
+                       	   <hr/>
+                           <h1>如何使用JSONP方式调用</h1>
+                           <p>
+                           我们收到了不少用户反馈，希望能够在网页中直接调用心知天气API接口，而不需要通过服务器中转。因此我们在V3版中增加JSONP的支持。只要在请求中使用callback参数指定回调函数的名字并使用签名验证方式即可，并在网页中通过script的方式调用就可以了。例如：
+                           </p>
+                           <div class="highlight">
+                                <pre>
+                                    <code class="html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="nc">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="nc">src</span>=<span class="hljs-string s">"https://api.thinkpage.cn/v3/weather/now.json?location=beijing&amp;ts=1443079775&amp;ttl=30&amp;uid=[your_uid]&amp;sig=[your_signature]&amp;callback=showWeather"</span>&gt;</span><span class="undefined">&lt;/&lt;script&gt;</span></code>
+                                </pre>
+                           </div>   
+                       	   <p>返回结果：</p>
+                           <div class="highlight">
+                                <pre>
+                                    <code class="javascript hljs">showWeather({
+  <span class="nc">"results"</span>: [{
+    <span class="nc">"location"</span>: {
+      <span class="nc">"id"</span>: <span class="hljs-string">"WX4FBXXFKE4F"</span>,
+      <span class="nc">"name"</span>: <span class="hljs-string">"北京"</span>,
+      ......
+});</code>
+                                </pre>
+                           </div>  
+                           <div class="bs-callout bs-callout-danger" id="callout-btndropdown-dependency">
+                                <h4>说明：</h4>
+                                <ul class="apiul">
+                                  <li>关于使用签名验证的方式请见：<a href="#">如何使用更安全的签名验证方式</a></li>
+                                  <li>关于如何查看用户ID请见：<a href="#">查看API密钥和用户ID</a></li>
+                              </ul>
+                           </div>	
+                           
+                           <hr/>
+                           <h1>关于返回值单位的说明</h1>
+                           <p>V3版API对于返回值的单位做了更加标准化的处理。unit参数除了会影响温度单位外，还会影响风速、能见度和气压的单位，具体说明如下：</p>
+                           <p><strong>当unit为c时</strong></p>
+                           <table class="table table-bordered table-hover table-striped" style="width:300px"><thead><tr><th>返回值</th><th>单位</th></tr></thead><tbody><tr><td>温度</td><td>c（摄氏度）</td></tr><tr><td>风速</td><td>km/h（千米每小时）</td></tr><tr><td>能见度</td><td>km（千米）</td></tr><tr><td>气压</td><td>mb（百帕）</td></tr></tbody></table>
+                           <p><strong>当unit为f时</strong></p>
+                           <table class="table table-bordered table-hover table-striped" style="width:300px"><thead><tr><th>返回值</th><th>单位</th></tr></thead><tbody><tr><td>温度</td><td>f（华氏度）</td></tr><tr><td>风速</td><td>mph（英里每小时）</td></tr><tr><td>能见度</td><td>mi（英里）</td></tr><tr><td>气压</td><td>in（英寸）</td></tr></tbody></table>
+                           
+                           <hr/>
+                           <h1>天气现象代码说明</h1>
+                           <p>每一种天气现象（例如：晴、小雨、多云等）都对应一个天气现象代码，即API返回结果中的code字段。下表列出了心知天气API所有可能返回的天气现象代码的对照关系。</p>
+                           <p><strong>天气现象图标下载</strong></p>
+                           <p>每一个天气现象代码也对应了一个相应的PNG图标。心知天气为会员提供原创设计的图标免费使用。下载地址：</p>
+                           <ul class="apiul">
+                              <li><a href="#">60*60像素</a></li>
+                              <li><a href="#">180*180像素</a></li>
+                           </ul>
+                           <table class="table table-bordered table-striped" style="width:500px"><thead><tr><th style="text-align:center">代码</th><th style="text-align:center">中文</th><th style="text-align:center">英文</th><th style="text-align:center">图标</th></tr></thead><tbody><tr><td style="text-align:center">0</td><td style="text-align:center">晴</td><td style="text-align:center">Sunny</td><td style="text-align:center"><img src="img/tq/0.png" alt="晴"></td></tr><tr><td style="text-align:center">1</td><td style="text-align:center">晴</td><td style="text-align:center">Clear</td><td style="text-align:center"><img src="img/tq/1.png" alt="晴"></td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">晴</td><td style="text-align:center">Fair</td><td style="text-align:center"><img src="img/tq/2.png" alt="晴"></td></tr><tr><td style="text-align:center">3</td><td style="text-align:center">晴</td><td style="text-align:center">Fair</td><td style="text-align:center"><img src="img/tq/3.png" alt="晴"></td></tr><tr><td style="text-align:center">4</td><td style="text-align:center">多云</td><td style="text-align:center">Cloudy</td><td style="text-align:center"><img src="img/tq/4.png" alt="多云"></td></tr><tr><td style="text-align:center">5</td><td style="text-align:center">晴间多云</td><td style="text-align:center">Partly Cloudy</td><td style="text-align:center"><img src="img/tq/5.png" alt="晴间多云"></td></tr><tr><td style="text-align:center">6</td><td style="text-align:center">晴间多云</td><td style="text-align:center">Partly Cloudy</td><td style="text-align:center"><img src="img/tq/6.png" alt="晴间多云"></td></tr><tr><td style="text-align:center">7</td><td style="text-align:center">大部多云</td><td style="text-align:center">Mostly Cloudy</td><td style="text-align:center"><img src="img/tq/7.png" alt="大部多云"></td></tr><tr><td style="text-align:center">8</td><td style="text-align:center">大部多云</td><td style="text-align:center">Mostly Cloudy</td><td style="text-align:center"><img src="img/tq/8.png" alt="大部多云"></td></tr><tr><td style="text-align:center">9</td><td style="text-align:center">阴</td><td style="text-align:center">Overcast</td><td style="text-align:center"><img src="img/tq/9.png" alt="阴"></td></tr><tr><td style="text-align:center">10</td><td style="text-align:center">阵雨</td><td style="text-align:center">Shower</td><td style="text-align:center"><img src="img/tq/10.png" alt="阵雨"></td></tr><tr><td style="text-align:center">11</td><td style="text-align:center">雷阵雨</td><td style="text-align:center">Thundershower</td><td style="text-align:center"><img src="img/tq/11.png" alt="雷阵雨"></td></tr><tr><td style="text-align:center">12</td><td style="text-align:center">雷阵雨伴有冰雹</td><td style="text-align:center">Thundershower with Hail</td><td style="text-align:center"><img src="img/tq/12.png" alt="雷阵雨伴有冰雹"></td></tr><tr><td style="text-align:center">13</td><td style="text-align:center">小雨</td><td style="text-align:center">Light Rain</td><td style="text-align:center"><img src="img/tq/13.png" alt="小雨"></td></tr><tr><td style="text-align:center">14</td><td style="text-align:center">中雨</td><td style="text-align:center">Moderate Rain</td><td style="text-align:center"><img src="img/tq/14.png" alt="中雨"></td></tr><tr><td style="text-align:center">15</td><td style="text-align:center">大雨</td><td style="text-align:center">Heavy Rain</td><td style="text-align:center"><img src="img/tq/15.png" alt="大雨"></td></tr><tr><td style="text-align:center">16</td><td style="text-align:center">暴雨</td><td style="text-align:center">Storm</td><td style="text-align:center"><img src="img/tq/15.png" alt="暴雨"></td></tr><tr><td style="text-align:center">17</td><td style="text-align:center">大暴雨</td><td style="text-align:center">Heavy Storm</td><td style="text-align:center"><img src="img/tq/15.png" alt="大暴雨"></td></tr><tr><td style="text-align:center">18</td><td style="text-align:center">特大暴雨</td><td style="text-align:center">Severe Storm</td><td style="text-align:center"><img src="img/tq/15.png" alt="特大暴雨"></td></tr><tr><td style="text-align:center">19</td><td style="text-align:center">冻雨</td><td style="text-align:center">Ice Rain</td><td style="text-align:center"><img src="img/tq/13.png" alt="冻雨"></td></tr><tr><td style="text-align:center">20</td><td style="text-align:center">雨夹雪</td><td style="text-align:center">Sleet</td><td style="text-align:center"><img src="img/tq/13.png" alt="雨夹雪"></td></tr><tr><td style="text-align:center">21</td><td style="text-align:center">阵雪</td><td style="text-align:center">Snow Flurry</td><td style="text-align:center"><img src="img/tq/21.png" alt="阵雪"></td></tr><tr><td style="text-align:center">22</td><td style="text-align:center">小雪</td><td style="text-align:center">Light Snow</td><td style="text-align:center"><img src="img/tq/21.png" alt="小雪"></td></tr><tr><td style="text-align:center">23</td><td style="text-align:center">中雪</td><td style="text-align:center">Moderate Snow</td><td style="text-align:center"><img src="img/tq/21.png" alt="中雪"></td></tr><tr><td style="text-align:center">24</td><td style="text-align:center">大雪</td><td style="text-align:center">Heavy Snow</td><td style="text-align:center"><img src="img/tq/21.png" alt="大雪"></td></tr><tr><td style="text-align:center">25</td><td style="text-align:center">暴雪</td><td style="text-align:center">Snowstorm</td><td style="text-align:center"><img src="img/tq/21.png" alt="暴雪"></td></tr><tr><td style="text-align:center">26</td><td style="text-align:center">浮尘</td><td style="text-align:center">Dust</td><td style="text-align:center"><img src="img/tq/26.png" alt="浮尘"></td></tr><tr><td style="text-align:center">27</td><td style="text-align:center">扬沙</td><td style="text-align:center">Sand</td><td style="text-align:center"><img src="img/tq/26.png" alt="扬沙"></td></tr><tr><td style="text-align:center">28</td><td style="text-align:center">沙尘暴</td><td style="text-align:center">Duststorm</td><td style="text-align:center"><img src="img/tq/26.png" alt="沙尘暴"></td></tr><tr><td style="text-align:center">29</td><td style="text-align:center">强沙尘暴</td><td style="text-align:center">Sandstorm</td><td style="text-align:center"><img src="img/tq/26.png" alt="强沙尘暴"></td></tr><tr><td style="text-align:center">30</td><td style="text-align:center">雾</td><td style="text-align:center">Foggy</td><td style="text-align:center"><img src="img/tq/32.png" alt="雾"></td></tr><tr><td style="text-align:center">31</td><td style="text-align:center">霾</td><td style="text-align:center">Haze</td><td style="text-align:center"><img src="img/tq/32.png" alt="霾"></td></tr><tr><td style="text-align:center">32</td><td style="text-align:center">风</td><td style="text-align:center">Windy</td><td style="text-align:center"><img src="img/tq/32.png" alt="风"></td></tr><tr><td style="text-align:center">33</td><td style="text-align:center">大风</td><td style="text-align:center">Blustery</td><td style="text-align:center"><img src="img/tq/32.png" alt="大风"></td></tr><tr><td style="text-align:center">34</td><td style="text-align:center">飓风</td><td style="text-align:center">Hurricane</td><td style="text-align:center"><img src="img/tq/34.png" alt="飓风"></td></tr><tr><td style="text-align:center">35</td><td style="text-align:center">热带风暴</td><td style="text-align:center">Tropical Storm</td><td style="text-align:center"><img src="img/tq/34.png" alt="热带风暴"></td></tr><tr><td style="text-align:center">36</td><td style="text-align:center">龙卷风</td><td style="text-align:center">Tornado</td><td style="text-align:center"><img src="img/tq/34.png" alt="龙卷风"></td></tr><tr><td style="text-align:center">37</td><td style="text-align:center">冷</td><td style="text-align:center">Cold</td><td style="text-align:center"><img src="img/tq/37.png" alt="冷"></td></tr><tr><td style="text-align:center">38</td><td style="text-align:center">热</td><td style="text-align:center">Hot</td><td style="text-align:center"><img src="img/tq/0.png" alt="热"></td></tr><tr><td style="text-align:center">99</td><td style="text-align:center">未知</td><td style="text-align:center">Unknown</td><td style="text-align:center"><img src="img/tq/99.png" alt="未知"></td></tr></tbody></table>
+                    </div>   
+                    <!--开始end-->   
+                    </div> 
+                    <!--天气-->  
+                    <div class="panel panel-default" id="tianqi">
+                       <div class="panel-heading" id="tianqi"><a href="#">天气</a></div>
+                       <div class="apiboxbody" id="tianqiqingkuang">
+                           <h1>天气情况</h1>
+                           <div class="panel panel-success">
+                               <div class="panel-heading"> <button type="button" class="btn btn-default btn-sm">GET</button>&nbsp;&nbsp;<a href="#">/weather/now.json</a></div>
+                               <div class="apiboxbody">
+                                  <p>获取指定城市的实况天气。</p>
+                                  <p><strong>请求地址示例</strong></p>
+                                  <p><a href="#">https://api.thinkpage.cn/v3/weather/now.json?key=your_api_key&location=beijing&language=zh-Hans&unit=c</a></p>
+                                  <p><strong>参数</strong></p>
+                                  
+                                  <dl class="inner"><dt>key</dt><dd><b>你的API密钥</b></dd><dt>location</dt><dd><b>所查询的位置</b><p class="choices">参数值范围：</p><ul class="parameters"><li><code>城市ID</code> 例如：location=WX4FBXXFKE4F</li><li><code>城市中文名</code> 例如：location=北京</li><li><code>城市拼音/英文名</code> 例如：location=beijing</li><li><code>经纬度</code> 例如：location=39.93:116.40 （注意纬度前经度在后，冒号分隔）</li><li><code>IP地址</code> 例如：location=220.181.111.86</li><li><code>“ip”两个字母</code> 自动识别请求IP地址，例如：location=ip</li></ul><p></p></dd><dt>language</dt><dd><b>语言 (可选)</b><p class="choices">参数值范围：</p><ul class="parameters"><li><code>zh-Hans</code> 简体中文</li><li><code>zh-Hant</code> 繁体中文</li><li><code>en</code> 英文</li><li><code>ja</code> 日语</li><li><code>de</code> 德语</li><li><code>fr</code> 法语</li></ul><p></p><p>默认值：<code>zh-Hans                    </code></p></dd><dt>unit</dt><dd><b>单位 (可选)</b><p class="choices">参数值范围：</p><ul class="parameters"><li><code>c</code> 当参数为c时，温度c、风速km/h、能见度km、气压mb</li><li><code>f</code> 当参数为f时，温度f、风速mph、能见度mile、气压inch</li></ul><p></p><p>默认值：<code>c</code></p></dd></dl>
+                                  <p><strong>返回结果&nbsp;&nbsp;<code>200</code></strong></p>
+                                  <div class="highlight">
+                                        <pre>
+                                            <code class="json hljs">{
+  <span class="nc">"results"</span>: [{
+  <span class="nc">"location"</span>: {
+      <span class="nc">"id"</span>: <span class="hljs-string">"C23NB62W20TF"</span>,
+      <span class="nc">"name"</span>: <span class="hljs-string">"西雅图"</span>,
+      <span class="nc">"country"</span>: <span class="hljs-string">"US"</span>,
+      <span class="nc">"timezone"</span>: <span class="hljs-string">"America/Los_Angeles"</span>,
+      <span class="nc">"timezone_offset"</span>: <span class="hljs-string">"-07:00"</span>
+  },
+  <span class="nc">"now"</span>: {
+      <span class="nc">"text"</span>: <span class="hljs-string">"多云"</span>, //天气现象文字
+      <span class="nc">"code"</span>: <span class="hljs-string">"4"</span>, //天气现象代码
+      <span class="nc">"temperature"</span>: <span class="hljs-string">"14"</span>, //温度，单位为c摄氏度或f华氏度
+      <span class="nc">"feels_like"</span>: <span class="hljs-string">"14"</span>, //体感温度，单位为c摄氏度或f华氏度
+      <span class="nc">"pressure"</span>: <span class="hljs-string">"1018"</span>, //气压，单位为mb百帕或in英寸
+      <span class="nc">"humidity"</span>: <span class="hljs-string">"76"</span>, //相对湿度，0~100，单位为百分比
+      <span class="nc">"visibility"</span>: <span class="hljs-string">"16.09"</span>, //能见度，单位为km公里或mi英里
+      <span class="nc">"wind_direction"</span>: <span class="hljs-string">"西北"</span>, //风向文字
+      <span class="nc">"wind_direction_degree"</span>: <span class="hljs-string">"340"</span>, //风向角度，范围0~360，0为正北，90为正东，180为正南，270为正西
+      <span class="nc">"wind_speed"</span>: <span class="hljs-string">"8.05"</span>, //风速，单位为km/h公里每小时或mph英里每小时
+      <span class="nc">"wind_scale"</span>: <span class="hljs-string">"2"</span>, //风力等级，请参考：http://baike.baidu.com/view/<span class="hljs-number">465076.</span>htm
+      <span class="hljs-string">"clouds"</span>: <span class="hljs-string">"90"</span>, //云量，范围0~100，天空被云覆盖的百分比
+      <span class="nc">"dew_point"</span>: <span class="hljs-string">"-12"</span> //露点温度，请参考：http://baike.baidu.com/view/<span class="hljs-number">118348.</span>htm
+  },
+  <span class="nc">"last_update"</span>: <span class="hljs-string">"2015-09-25T22:45:00-07:00"</span> //数据更新时间（该城市的本地时间）
+  }]
+}</code>
+                                        </pre>
+                                   </div>  
+                               </div>
+                            </div> 
+                       </div>
+                       <hr/>
+                       <div class="apiboxbody" id="zhuriyubao">
+                       <h1>逐日预报和历史</h1>
+                       <div class="panel panel-success">
+                               <div class="panel-heading"> <button type="button" class="btn btn-default btn-sm">GET</button>&nbsp;&nbsp;<a href="#">/weather/daily.json</a></div>
+                               <div class="apiboxbody">
+                                  <p>获取指定城市未来最多15天的每日白天和夜间预报，以及昨天的历史数据。。</p>
+                                  <p><strong>请求地址示例</strong></p>
+                                  <ul class="apiul">
+                                      <li><strong>北京今天和未来4天的预报</strong><br/><a target="_blank" href="https://api.thinkpage.cn/v3/weather/daily.json?key=your_api_key&amp;location=beijing&amp;language=zh-Hans&amp;unit=c&amp;start=0&amp;days=5" class="uri">https://api.thinkpage.cn/v3/weather/daily.json?key=your_api_key&amp;location=beijing&amp;language=zh-Hans&amp;unit=c&amp;start=0&amp;days=5</a></li>
+                                      <li><strong>北京昨天天气、今天和未来3天的预报（仅旗舰会员和大客户支持昨天天气）</strong><br/><a target="_blank" href="https://api.thinkpage.cn/v3/weather/daily.json?key=your_api_key&amp;location=beijing&amp;language=zh-Hans&amp;unit=c&amp;start=-1&amp;days=5" class="uri">https://api.thinkpage.cn/v3/weather/daily.json?key=your_api_key&amp;location=beijing&amp;language=zh-Hans&amp;unit=c&amp;start=-1&amp;days=5</a></li>
+                                  </ul>
+                                  <p><strong>参数</strong></p>
+                                  <dl class="inner"><dt>key</dt><dd><b>你的API密钥</b></dd><dt>location</dt><dd><b>所查询的位置</b><p class="choices">参数值范围：</p><ul class="parameters"><li><code>城市ID</code> 例如：location=WX4FBXXFKE4F</li><li><code>城市中文名</code> 例如：location=北京</li><li><code>城市拼音/英文名</code> 例如：location=beijing</li><li><code>经纬度</code> 例如：location=39.93:116.40 （注意纬度前经度在后，冒号分隔）</li><li><code>IP地址</code> 例如：location=220.181.111.86</li><li><code>“ip”两个字母</code> 自动识别请求IP地址，例如：location=ip</li></ul><p></p></dd><dt>language</dt><dd><b>语言 (可选)</b><p class="choices">参数值范围：</p><ul class="parameters"><li><code>zh-Hans</code> 简体中文</li><li><code>zh-Hant</code> 繁体中文</li><li><code>en</code> 英文</li><li><code>ja</code> 日语</li><li><code>de</code> 德语</li><li><code>fr</code> 法语</li></ul><p></p><p>默认值：<code>zh-Hans                    </code></p></dd><dt>unit</dt><dd><b>单位 (可选)</b><p class="choices">参数值范围：</p><ul class="parameters"><li><code>c</code> 当参数为c时，温度c、风速km/h、能见度km、气压mb</li><li><code>f</code> 当参数为f时，温度f、风速mph、能见度mile、气压inch</li></ul><p></p><p>默认值：<code>c</code></p></dd><dt>start</dt><dd><b>起始时间 (可选)</b><p class="choices">参数值范围：</p><ul class="parameters"><li><code>日期</code> 例如：start=2015/10/1</li><li><code>整数</code> 例如：start=-2 代表前天、start=-1 代表昨天、start=0 代表今天、start=1 代表明天</li></ul><p></p><p>默认值：<code>0</code></p></dd><dt>days</dt><dd><b>天数 (可选)</b> 返回从start算起days天的结果。默认为你的权限允许的最多天数。<p class="choices">参数值范围：</p><ul class="parameters"><li><code>整数</code> 例如：days=3 代表3天、days=7 代表7天</li></ul><p></p></dd></dl>
+                                  <p><strong>返回结果&nbsp;&nbsp;<code>200</code></strong></p>
+                                  <div class="highlight">
+                                        <pre>
+                                            <code class="json hljs">{
+  <span class="nc">"results"</span>: [{
+    <span class="nc">"location"</span>: {
+      <span class="nc">"id"</span>: <span class="hljs-string">"WX4FBXXFKE4F"</span>,
+      <span class="nc">"name"</span>: <span class="hljs-string">"北京"</span>,
+      <span class="nc">"country"</span>: <span class="hljs-string">"CN"</span>,
+      <span class="nc">"path"</span>: <span class="hljs-string">"北京,北京,中国"</span>,
+      <span class="nc">"timezone"</span>: <span class="hljs-string">"Asia/Shanghai"</span>,
+      <span class="nc">"timezone_offset"</span>: <span class="hljs-string">"+08:00"</span>
+    },
+    <span class="nc">"daily"</span>: [{                         //返回指定days天数的结果
+      <span class="nc">"date"</span>: <span class="hljs-string">"2015-09-20"</span>,             //日期
+      <span class="nc">"text_day"</span>: <span class="hljs-string">"多云"</span>,               //白天天气现象文字
+      <span class="nc">"code_day"</span>: <span class="hljs-string">"4"</span>,                  //白天天气现象代码
+      <span class="nc">"text_night"</span>: <span class="hljs-string">"晴"</span>,               //晚间天气现象文字
+      <span class="nc">"code_night"</span>: <span class="hljs-string">"0"</span>,                //晚间天气现象代码
+      <span class="nc">"high"</span>: <span class="hljs-string">"26"</span>,                     //当天最高温度
+      <span class="nc">"low"</span>: <span class="hljs-string">"17"</span>,                      //当天最低温度
+      <span class="nc">"precip"</span>: <span class="hljs-string">"0"</span>,                    //降水概率，范围0~100，单位百分比
+      <span class="nc">"wind_direction"</span>: <span class="hljs-string">""</span>,             //风向文字
+      <span class="nc">"wind_direction_degree"</span>: <span class="hljs-string">"255"</span>,   //风向角度，范围0~360
+      <span class="nc">"wind_speed"</span>: <span class="hljs-string">"9.66"</span>,             //风速，单位km/h（当unit=c时）、mph（当unit=f时）
+      <span class="nc">"wind_scale"</span>: <span class="hljs-string">""</span>                  //风力等级
+    }, {
+      <span class="nc">"date"</span>: <span class="hljs-string">"2015-09-21"</span>,
+      <span class="nc">"text_day"</span>: <span class="hljs-string">"晴"</span>,
+      <span class="nc">"code_day"</span>: <span class="hljs-string">"0"</span>,
+      <span class="nc">"text_night"</span>: <span class="hljs-string">"晴"</span>,
+      <span class="nc">"code_night"</span>: <span class="hljs-string">"0"</span>,
+      <span class="nc">"high"</span>: <span class="hljs-string">"27"</span>,
+      <span class="nc">"low"</span>: <span class="hljs-string">"17"</span>,
+      <span class="nc">"precip"</span>: <span class="hljs-string">"0"</span>,
+      <span class="nc">"wind_direction"</span>: <span class="hljs-string">""</span>,
+      <span class="nc">"wind_direction_degree"</span>: <span class="hljs-string">"157"</span>,
+      <span class="nc">"wind_speed"</span>: <span class="hljs-string">"17.7"</span>,
+      <span class="nc">"wind_scale"</span>: <span class="hljs-string">"3"</span>
+    }, {
+      ...                               //更多返回结果
+    }],
+    <span class="nc">"last_update"</span>: <span class="hljs-string">"2015-09-20T18:00:00+08:00"</span> //数据更新时间（该城市的本地时间）
+  }]
+}</code>
+                                        </pre>
+                                   </div>
+                               </div>
+                            </div> 
+                        </div>
+                    </div>   
+                </div>   
+            </div>
+        <!--body结束-->
+        <div class="clear"></div>
+    	<!--时间选择器
+    	<input type="text" class="form-control Wdate displayib" style="width:110px" onclick="WdatePicker()" value="2016-01-01">
+        -->
+        
+    	<!--表格
+        <table class="table table-striped table-hover table-bordered">
+        	<thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        -->
+        
+        
+    	<!--弹出框
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">标题</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+        
+        <!--分页
+        <div style="clear:both; height:50px">
+            <div id="kkpager"></div>
+            <script type="text/javascript">
+                function getParameter(name) { 
+                    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+                    var r = window.location.search.substr(1).match(reg); 
+                    if (r!=null) return unescape(r[2]); return null;
+                }
+                
+                //init
+                $(function(){
+                    var totalPage = 20;
+                    var totalRecords = 390;
+                    var pageNo = getParameter('pno');
+                    if(!pageNo){
+                        pageNo = 1;
+                    }
+                    //初始化分页控件
+                    //有些参数是可选的，比如lang，若不传有默认值
+                    kkpager.init({
+                        pno : pageNo,
+                        //总页码
+                        total : totalPage,
+                        //总数据条数
+                        totalRecords : totalRecords,
+                        //链接前部
+                        hrefFormer : 'pagination',
+                        //链接尾部
+                        hrefLatter : '.html',
+                        getLink : function(n){
+                            return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                        },
+                        lang : {
+                            prePageText : '上一页',
+                            nextPageText : '下一页',
+                            totalPageBeforeText : '共',
+                            totalPageAfterText : '页',
+                            totalRecordsAfterText : '条数据',
+                            gopageBeforeText : '转到',
+                            gopageButtonOkText : '确定',
+                            gopageAfterText : '页',
+                            buttonTipBeforeText : '第',
+                            buttonTipAfterText : '页'
+                        }
+                    });
+                    //生成
+                    kkpager.generPageHtml();
+                });
+            </script>
+        </div>
+        -->
+        </div>
+	</div>
+    <!--登录框-->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document" style="width:280px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">请登录..</h4>
+          </div>
+          <div class="modal-body uesr-dlk">
+            <img src="img/user/dx2.png" width="150" height="150"/>
+            <table>
+                <tr>
+                    <td>账号：</td>
+                    <td><input type="text" class="form-control"/></td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td><input type="password" class="form-control" /></td>
+                </tr>
+            </table>
+          </div>
+          <div class="modal-footer" style="text-align:center">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onClick="sign()">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--bototm-->
+    <div class="configureBottom">
+        <table class="bottombottom">
+        	<tbody>
+            	<tr>
+            		<td>本站所有经过分析处理的数据及分析结果（包括但不限于简报、走势、量价分析数据）均为南京绿色科技研究院有限公司所有，未经授权请勿复制、转载利用。违者我方有权追究法律责任！<br>
+                			copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+               		 </td>
+           	    </tr>
+       	    </tbody>
+        </table>
+    </div> 
+</body>
+</html>

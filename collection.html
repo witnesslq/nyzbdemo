@@ -1,0 +1,973 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大数据-定制</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html" class="selectweb">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>	
+                     <a href="base.html">知识库</a>			
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain" style="margin-top:20px">
+    	<div class="configureMainbox">
+        <!--body开始-->
+            <div class="shoppingcart_box">
+            	<!--左侧菜单-->
+                <div class="shoppingcart_menu floatleft usershoping" style="min-height:660px">
+                     <div class="userspitle"><img src="img/ico/1.png"/>个人收藏</div>
+                     <div style="max-height:120px; overflow:auto">
+                         <ul>
+                            <li><a href="javacript:void(0)" onClick="openandcloss('shoucang')">水稻稻飞虱</a></li>
+                            <li><a href="#">马铃薯晚疫病</a></li>
+                            <li><a href="javacript:void(0)" onClick="openandcloss('shoucang')">水稻稻飞虱</a></li>
+                            <li><a href="#">马铃薯晚疫病</a></li>
+                         </ul>
+                     </div>
+                     <div class="userspitle"><img src="img/ico/2.png"/>大众制图</div>
+                     <ul>
+                     	<li><a href="javacript:void(0)" onClick="openandcloss('moban')">我的专题</a></li>
+                        <li><a href="javacript:void(0)" onClick="openandcloss('scsj')">制作专题</a></li>
+                        <li><a href="javacript:void(0)">回收站</a></li>
+                     </ul>
+                     <div class="userspitle"><img src="img/ico/3.png"/>数据报告</div>
+                     <ul>
+                     	<li><a href="javacript:void(0)" onClick="openandcloss('baogao')">我的报告</a></li>
+                        <li><a href="#" onClick="gotoplay('report.html')">生成报告</a></li>
+                        <li><a href="javacript:void(0)">回收站</a></li>
+                     </ul>
+                     <div class="userspitle"><img src="img/ico/4.png"/>企业服务</div>
+                     <ul>
+                     	<li><a href="javacript:void(0)" onClick="openandcloss('dzbg')">定制专业报告</a></li>
+                     </ul>
+                     <div class="userspitle"><img src="img/ico/5.png"/>账户设置</div>
+                     <ul>
+                     	<li><a href="javacript:void(0)" onClick="openandcloss('grzl')">个人资料</a></li>
+                        <li><a href="javacript:void(0)" onClick="openandcloss('zhaq')">账号安全</a></li>
+                     </ul>
+                </div>
+                <!--定制报告-->
+                <div class="shoppingcart_board floatleft" id="dzbg" style="display:none">
+                	<div class="shoppingcart_box">
+                        <div class="qyfwtitle">
+                            <div class="qyfwtitleh1">[网聚数据力量 把握企业发展 审视企业风险 借力信用评估]</div>
+                            <div class="qyfwtitleh3">全面的企业全景信息、专业的风险评估模型、实时的更新监控播报、个性的服务定制模式</div>
+                        </div>
+                        <div class="qyfwsm2">
+                            <ul>
+                                <li>
+                                    <a href="#" class="qyfwimg" onClick="openwindall(1)"></a>
+                                    <a href="#" onClick="openwindall(1)">基本公告</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="qyfwimg_2" onClick="openwindall(1)"></a>
+                                    <a href="#" onClick="openwindall(1)">信用报告</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="qyfwimg_3" onClick="openwindall(1)"></a>
+                                    <a href="#" onClick="openwindall(1)">深度报告</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear" style="text-align:center; padding-bottom:20px">
+                            企业定制报告，帮助您考察企业全景信息、了解企业信用状况、实时监测企业变化
+                        </div>
+                        <div style="background:#fafafa; height:400px" class="qyfwsm">
+                            <img src="img/wmtg.jpg" width="805" height="168"/>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div style="margin-left:60px">基于专业数据，通过大数据挖掘、整合、分析，建立精确定位标准，洞察受众群体，锁定目标客户。为企业在营销决策提供数据支撑，推动营销，节约成本。</div>
+                                    </td>
+                                    <td>
+                                        <div style="margin-left:130px">凭借强大的企业信用数据库，基于动态风险评价体系，运用科学严谨的评估方法，对企业的资产力、履约力、信誉度综合评定，为企业履约能力和投标信誉提供衡量依据，发现企业不足和隐患，规避商业交易风险。动营销，节约成本。</div>
+                                    </td>
+                                    <td>
+                                        <div style="margin-left:150px">引入病毒理论，洞悉客户关联族谱，结合企业财务指标、发展潜力、行业优势等要素，帮助您全面、系统了解企业价值点、获得投资决策信息，提升投资决策的正确性，避免投资失误造成损失。</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--马铃薯-->
+                <div class="shoppingcart_board floatleft" id="shoucang" style="display:none">
+                   <div class="user-lb-title">
+                   	<span class="absotit">水稻稻飞虱<span class="rbox"><div class="sclb">收藏列表用于收藏您保存过的专题。</div></span></span>
+                    <div class="floatright">
+                      收藏数：<span class="ssj">6</span>&nbsp;&nbsp
+                    </div>
+                    <div class="clear"></div>
+                   </div>
+                   <div class="indexleft2 guanli">
+                	<ul>
+                        <li>
+                            <a href="product.html" class="tubox"><img src="img/tu/1.jpg"></a>
+                            <h3><a href="product.html">稻飞虱发生面积</a></h3>
+                            <span class="xz55"><a href="product.html">稻飞虱长翅型成虫均能长距离迁飞。趋光性强，且喜趋嫩绿；但灰飞虱的趋光性稍弱。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="product.html"><img src="img/tu/2.jpg"></a>
+                            <h3><a href="product.html">稻飞虱发生地区</a></h3>
+                            <span class="xz55"><a href="product.html">在华中稻区，迟熟早稻常易受害。灰飞虱为温带地区的害虫，适温为25℃左右，耐低温能力较强，而夏季高温则对其发育不利，华北地区7～8月降雨少的年份有利于大发生。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="openwindall(1)"><img src="img/tu/3.jpg"></a>
+                            <h3><a href="javascript:void(0)" onclick="openwindall(1)">稻飞虱逐年发生情况</a></h3>
+                            <span class="xz55"><a href="javascript:void(0)" onclick="openwindall(1)">稻飞虱的发生与迁入虫量、气候、水稻品种和生育期、栽培管理技术、天敌有密切关系。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="product.html" class="tubox"><img src="img/tu/1.jpg"></a>
+                            <h3><a href="product.html">稻飞虱发生面积</a></h3>
+                            <span class="xz55"><a href="product.html">稻飞虱长翅型成虫均能长距离迁飞。趋光性强，且喜趋嫩绿；但灰飞虱的趋光性稍弱。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="product.html"><img src="img/tu/2.jpg"></a>
+                            <h3><a href="product.html">稻飞虱发生地区</a></h3>
+                            <span class="xz55"><a href="product.html">在华中稻区，迟熟早稻常易受害。灰飞虱为温带地区的害虫，适温为25℃左右，耐低温能力较强，而夏季高温则对其发育不利，华北地区7～8月降雨少的年份有利于大发生。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="openwindall(1)"><img src="img/tu/3.jpg"></a>
+                            <h3><a href="javascript:void(0)" onclick="openwindall(1)">稻飞虱逐年发生情况</a></h3>
+                            <span class="xz55"><a href="javascript:void(0)" onclick="openwindall(1)">稻飞虱的发生与迁入虫量、气候、水稻品种和生育期、栽培管理技术、天敌有密切关系。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                    </ul>
+                </div> 
+                <div class="clear"></div>   
+                </div>
+                <!--默认页面-->
+                <div class="shoppingcart_board floatleft" id="moren" style="display:block;height:660px">
+                    <div class="dsjfxkf" >
+                        <img src="img/dingzhi.png" width="32" height="32"/><span class="morentitle2">&nbsp;&nbsp;大数据分析能力开放系统</span>
+                        &nbsp;&nbsp;大数据分析能力可以编辑大数据分析系统中保存的专题，帮您生成报告，也可以修改个人账户的相关信息。
+                    </div>
+                	<div class="bkindexbox" style="margin-top:0">
+						<div class="clear" style="border-bottom:1px solid #CCC;height:200px">
+                        	<div class="floatleft">
+                            	<div class="floatleft bkindeximg"><a href="#"><img src="img/zl/sc.jpg"/></a></div>	
+                                <div class="floatleft bkindexbody">
+                                	<div class="clear bkindexh1">
+                                    	<a href="#">个人收藏</a>&nbsp;<span class="qiyeSty"></span>
+                                        <span class="jianyiyuanSty"></span>
+                                    </div>
+                                    <div class="clear bkindextxt">您在专业大数据分析系统中所收藏的图表会保存到个人收藏中，您可以在这里编辑或者删除您保存的专题。</div>
+                                </div>
+                            </div>
+                            <div class="floatleft bkindexboxarticle">
+                            	<div class="floatleft bkindeximg"><a href="#"><img src="img/zl/ht.jpg" width="150" height="150"/></a></div>	
+                                <div class="floatleft bkindexbody">
+                                	
+                                	<div class="clear bkindexh1"><a href="#">大众制图</a>&nbsp;<span class="jianyiyuanSty"></span></div>
+                                    <div class="clear bkindextxt">您可以通过下载——上传数据中的模板，选择并创建自己的专题。在我的数据中，可以查看或者修改您之前创建的图表。</div>
+                                </div>
+                            </div>
+                        </div>         
+                        <div class="clear bkindexboxbottom" style="border:0">
+                        <ul class="bkList">
+                        	<li>
+                            	<div class="bkli_top"><a href="#"><img src="img/zl/bg.jpg"></a></div>
+                                <div class="bkli_bom bkindexh1"><a href="#">数据报告</a>&nbsp;<span class="jianyiyuanSty"></span></div>
+                            </li>
+                            <li>
+                            	<div class="bkli_top"><img src="img/zl/fw.jpg"></div>
+                                <div class="bkli_bom bkindexh1">企业服务&nbsp;<span class="jianyiyuanSty"></span></div>
+                            </li>
+                             <li>
+                            	<div class="bkli_top"><a href="qfzs.html"><img src="img/zl/zh.jpg"></a></div>
+                                <div class="bkli_bom bkindexh1"><a href="qfzs.html">账户设置</a>&nbsp;<span class="jianyiyuanSty"></span></div>
+                            </li>
+                        </ul>
+                        	
+                        </div>         
+                  </div>
+                </div>
+                
+                
+                <!--我的报告-->
+                <div class="shoppingcart_board floatleft" id="baogao" style="display:none">
+                   <div class="user-lb-title">
+                   	<span class="absotit">我的报告</span>
+                   	<div class="floatleft sclb">专题用于存档你制作的专题。</div>
+                    <div class="floatright">
+                      收藏数：<span class="ssj">6</span>&nbsp;&nbsp
+                      <!--<button class="btn btn-danger floatright" onClick="openwindall(2)">批量删除</button>-->
+                    </div>
+                    <div class="clear"></div>
+                   </div>
+                   <div class="indexleft2 guanli indexleft2baogao">
+                       	<div class="indexleft sclist" style="width:100%">
+                            <ul style="padding-top:0">
+                                <li>
+                                    <a href="preview.html"><img src="img/bg1.png" height="130"></a>
+                                    <h3><a href="preview.html">马铃薯晚疫病发生面积报告</a></h3>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>2016-2-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    热度：<span class="badge">176198</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="preview.html"><img src="img/bg3.png" height="130"></a>
+                                    <h3><a href="preview.html">河南省马铃薯晚疫病发生情况</a></h3>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>2016-2-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    热度：<span class="badge">4202</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="preview.html"><img src="img/bg2.png" height="130"></a>
+                                    <h3><a href="preview.html">晚疫病预防效果</a></h3>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>2016-2-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    热度：<span class="badge">4202</span>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td>
+                                                    <button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="preview.html"><img src="img/bg4.png" height="130"></a>
+                                    <h3><a href="preview.html">河北省发生马铃薯晚疫病</a></h3>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>2016-2-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    热度：<span class="badge">4202</span>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td>
+                                                    <button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="preview.html"><img src="img/bg2.png" height="130"></a>
+                                    <h3><a href="preview.html">马铃薯晚疫病发生面积报告</a></h3>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>2016-2-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    热度：<span class="badge">4202</span>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td>
+                                                    <button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="preview.html"><img src="img/bg1.png" height="130"></a>
+                                    <h3><a href="preview.html">河南省马铃薯晚疫病发生情况</a></h3>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>2016-2-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    热度：<span class="badge">4202</span>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                                <td>
+                                                    <button class="btn btn-warning btn-xs">编辑</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div> 
+                   </div>
+                </div>
+                <!--我的数据-->
+                <div class="shoppingcart_board floatleft" id="moban" style="display:none">
+                   <div class="user-lb-title">
+                        <span class="absotit">我的专题</span>
+                        <div class="floatleft sclb">专题用于存放您制作的专题。</div>
+                        <div class="floatright">
+                          收藏数：<span class="ssj">6</span>&nbsp;&nbsp
+                          <!--<button class="btn btn-danger floatright" onClick="openwindall(2)">批量删除</button>-->
+                        </div>
+                        <div class="clear"></div>
+                   </div>
+					<!--<div class="user-lb-ss">
+                   		指标数：<span class="ssj">1098</span>&nbsp;&nbsp;数据集： <span class="ssj">200</span>
+                   		<input type="text" class="form-control displayib" style="width:400px"/>
+                        <button class="btn btn-success displayib" >搜索</button>
+                        <button class="btn btn-danger floatright" onClick="openwindall(2)">批量删除</button>
+                   </div>-->
+                   <div class="indexleft2 guanli">
+                	<ul> 
+                        <li>
+                            <a href="#" class="tubox" onClick="openandcloss('scsj3')"><img src="img/tu/1.jpg"></a>
+                            <h3><a href="#" onClick="openandcloss('scsj3')">我的数据1</a></h3>
+                            <span class="xz55"><a href="#" onClick="openandcloss('scsj3')">我的数据说明，内容从模板中的简介部分调取。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button> <button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="#" class="tubox" onClick="openandcloss('scsj3')"><img src="img/tu/2.jpg"></a>
+                            <h3><a href="#" onClick="openandcloss('scsj3')">我的数据1</a></h3>
+                            <span class="xz55"><a href="#" onClick="openandcloss('scsj3')">我的数据说明，内容从模板中的简介部分调取。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button> <button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="#" class="tubox" onClick="openandcloss('scsj3')"><img src="img/tu/3.jpg"></a>
+                            <h3><a href="#" onClick="openandcloss('scsj3')">我的数据1</a></h3>
+                            <span class="xz55"><a href="#" onClick="openandcloss('scsj3')">我的数据说明，内容从模板中的简介部分调取。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button> <button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="#" class="tubox" onClick="openandcloss('scsj3')"><img src="img/tu/1.jpg"></a>
+                            <h3><a href="#" onClick="openandcloss('scsj3')">我的数据1</a></h3>
+                            <span class="xz55"><a href="#" onClick="openandcloss('scsj3')">我的数据说明，内容从模板中的简介部分调取。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button> <button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="#" class="tubox" onClick="openandcloss('scsj3')"><img src="img/tu/2.jpg"></a>
+                            <h3><a href="#" onClick="openandcloss('scsj3')">我的数据1</a></h3>
+                            <span class="xz55"><a href="#" onClick="openandcloss('scsj3')">我的数据说明，内容从模板中的简介部分调取。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button> <button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                        <li>
+                            <a href="#" class="tubox" onClick="openandcloss('scsj3')"><img src="img/tu/3.jpg"></a>
+                            <h3><a href="#" onClick="openandcloss('scsj3')">我的数据1</a></h3>
+                            <span class="xz55"><a href="#" onClick="openandcloss('scsj3')">我的数据说明，内容从模板中的简介部分调取。</a></span>
+                            <p align="center"><button class="btn btn-warning btn-xs">编辑</button> <button class="btn btn-danger btn-xs">删除</button></p>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+             <!--上传数据-->
+             <div class="shoppingcart_board floatleft" id="scsj" style="display:none" >
+             	<div class="configureContenttitlebox" style="background:#fff; height:50px">
+                    <div class="cclsm">
+                        <span class="bz">第一步：</span>请从下面的图表类型中选择一个开始自定义数据。
+                    </div>
+                </div>
+             	<div class="shoppingcart_box" style="padding:10px">
+                    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active"><a href="#1" role="tab" data-toggle="tab" aria-expanded="true">散点图</a></li>
+                      <li role="presentation"><a href="#2" role="tab" data-toggle="tab">柱状图</a></li>
+                      <li role="presentation"><a href="#3" role="tab" data-toggle="tab">折线图</a></li>
+                      <li role="presentation"><a href="#4" role="tab" data-toggle="tab">地图</a></li>
+                      <li role="presentation"><a href="#5" role="tab" data-toggle="tab">饼图</a></li>
+                      <li role="presentation"><a href="#6" role="tab" data-toggle="tab">雷达图</a></li>
+                      <li role="presentation"><a href="#7" role="tab" data-toggle="tab">K线图</a></li>
+                      <li role="presentation"><a href="#8" role="tab" data-toggle="tab">箱形图</a></li>
+                    </ul> 
+                    <div id="myTabContent" class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade in active" id="1">
+                        <div class="classbox2">
+                            <ul>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">点图</a></h3>
+                                </li>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">折线图</a></h3>
+                                </li>
+                                 <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-4.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">点图</a></h3>
+                                </li>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-8.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">饼图</a></h3>
+                                </li>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-8.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">饼图</a></h3>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="2" aria-labelledby="profile-tab">
+                        <div class="classbox2">
+                            <ul>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">点图</a></h3>
+                                </li>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">折线图</a></h3>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="3" aria-labelledby="dropdown1-tab">
+                        <div class="classbox2">
+                            <ul>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">点图</a></h3>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="4" aria-labelledby="dropdown2-tab">
+                        <div class="classbox2">
+                            <ul>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">点图</a></h3>
+                                </li>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">折线图</a></h3>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="5" aria-labelledby="dropdown2-tab">
+                        <div class="classbox2">
+                            <ul>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">点图</a></h3>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="6" aria-labelledby="dropdown2-tab">
+                        <div class="classbox2">
+                            <ul>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">点图</a></h3>
+                                </li>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">折线图</a></h3>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="7" aria-labelledby="dropdown2-tab">
+                        <div class="classbox2">
+                            <ul>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">点图</a></h3>
+                                </li>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">折线图</a></h3>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="8" aria-labelledby="dropdown2-tab">
+                        <div class="classbox2">
+                            <ul>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">点图</a></h3>
+                                </li>
+                                <li>
+                                    <a href="#" onClick="openandcloss('scsj2')"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                    <h3><a href="#" onClick="openandcloss('scsj2')">折线图</a></h3>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <!--上传数据2-->
+             <div class="shoppingcart_board floatleft" style="display:none" id="scsj2">
+             	<div class="configureContenttitlebox" style="height:50px">
+                        <div class="cclsm">
+                            <span class="bz">第二步：</span>点击下载模板，填写好数据以后，点击马上制作来生成图表。
+                        </div>
+                    </div>
+                    <div class="configureContentmainbox">
+                        <div class="configureContentrightmain" style="width:980px; border:0">
+                            <script src="assembly/echarts/echarts-all.js"></script>  
+                            <div class="floatleft" style="padding:10px; border:1px solid #CCC; margin-left:20px; background:#e6e6e6; height:360px; width:650px">
+                                <div style="margin:0 auto; width:300px; margin-top:100px"><img src="img/noimg.jpg" width="139" height="104"/>请先上传文件。</div>
+                                <!--<div id="zuo" style="height:360px; width:850px" ></div>-->
+                            </div>
+                            <script>
+                                var myChart = echarts.init(document.getElementById('zuo'));
+                                option = {
+                                title : {
+                                    text: '某站点用户访问来源',
+                                    subtext: '纯属虚构',
+                                    x:'center'
+                                },
+                                tooltip : {
+                                    trigger: 'item',
+                                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                },
+                                legend: {
+                                    orient : 'vertical',
+                                    x : 'left',
+                                    data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+                                },
+                                toolbox: {
+                                    show : true,
+                                    feature : {
+                                        mark : {show: true},
+                                        dataView : {show: true, readOnly: false},
+                                        magicType : {
+                                            show: true, 
+                                            type: ['pie', 'funnel'],
+                                            option: {
+                                                funnel: {
+                                                    x: '25%',
+                                                    width: '50%',
+                                                    funnelAlign: 'left',
+                                                    max: 1548
+                                                }
+                                            }
+                                        },
+                                        restore : {show: true},
+                                        saveAsImage : {show: true}
+                                    }
+                                },
+                                calculable : true,
+                                series : [
+                                    {
+                                        name:'访问来源',
+                                        type:'pie',
+                                        radius : '55%',
+                                        center: ['50%', '60%'],
+                                        data:[
+                                            {value:335, name:'直接访问'},
+                                            {value:310, name:'邮件营销'},
+                                            {value:234, name:'联盟广告'},
+                                            {value:135, name:'视频广告'},
+                                            {value:1548, name:'搜索引擎'}
+                                        ]
+                                    }
+                                ]
+                            };
+                                myChart.setOption(option);
+                            </script>
+                            <div class="floatleft" style="width:280px">
+                                <table>
+                                    <tr>
+                                        <td align="center" colspan="4"><h3><strong>柱状图</strong></h3></td>                           
+                                    </tr>
+                                    <tr>
+                                        <td width="90" align="right"><strong>应用次数</strong>：</td>
+                                        <td>15</td>
+                                        <td align="right"><strong>关注度：</strong></td>
+                                        <td>608</td>   
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <div style="border:1px solid #F9CB80; background:#FEF4E9; margin-left:15px; padding:5px; margin-top:10px">
+                                                <p align="center"><strong>说明</strong></p>
+                                                1、上传文件格式：EXCEL（2007、2013）；<br/> 
+                                                2、系统默认读取第一个工作表； <br/>
+                                                3、从第三行（含）读取数据（默认第一行为说明行，第二行为标题行）
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" align="center" style="padding-top:20px">
+                                            <button class="btn btn-success" onClick="openwindall(1)">马上制作</button>
+                                            <button class="btn btn-warning">下载模板</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+               </div>
+               <!--上传数据3-->
+               <div class="shoppingcart_board floatleft" style="display:none; height:780px" id="scsj3">
+                    <script src="assembly/echarts/echarts-all.js"></script>  
+                    <div class="user-lb-title" style="margin-bottom:20px">
+                   		<span>我的数据1</span>
+                    </div>
+                    <div class="floatleft" style="padding:10px; border:1px solid #CCC; margin-left:20px; background:#F0F0F0">
+                        <div id="zuo" style="height:360px; width:920px" ></div>
+                    </div>
+                    <div style="padding-top:20px; height:40px; line-height:40px; clear:both; text-align:center"><button class="btn btn-success" onClick="openandcloss('moban')">返回</button></div>
+                    <script>
+                        var myChart = echarts.init(document.getElementById('zuo'));
+                        option = {
+                        title : {
+                            text: '某站点用户访问来源',
+                            subtext: '纯属虚构',
+                            x:'center'
+                        },
+                        tooltip : {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient : 'vertical',
+                            x : 'left',
+                            data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+                        },
+                        toolbox: {
+                            show : true,
+                            feature : {
+                                mark : {show: true},
+                                dataView : {show: true, readOnly: false},
+                                magicType : {
+                                    show: true, 
+                                    type: ['pie', 'funnel'],
+                                    option: {
+                                        funnel: {
+                                            x: '25%',
+                                            width: '50%',
+                                            funnelAlign: 'left',
+                                            max: 1548
+                                        }
+                                    }
+                                },
+                                restore : {show: true},
+                                saveAsImage : {show: true}
+                            }
+                        },
+                        calculable : true,
+                        series : [
+                            {
+                                name:'访问来源',
+                                type:'pie',
+                                radius : '55%',
+                                center: ['50%', '60%'],
+                                data:[
+                                    {value:335, name:'直接访问'},
+                                    {value:310, name:'邮件营销'},
+                                    {value:234, name:'联盟广告'},
+                                    {value:135, name:'视频广告'},
+                                    {value:1548, name:'搜索引擎'}
+                                ]
+                            }
+                        ]
+                    };
+                        myChart.setOption(option);
+                    </script>
+               </div>
+               
+               <!--个人资料-->
+               <div class="shoppingcart_board floatleft" style="display:none; height:780px" id="grzl">
+                    <div class="user-lb-title">
+                        <span class="absotit">个人资料</span>
+                        <div class="floatleft sclb">在此可以修改您的个人资料。</div>
+                    </div>
+                    <div class="floatleft" style="padding:10px; margin-left:20px; width:930px">
+                    	 <table class="table table-striped table-hover table-bordered">
+                         	<tr>
+                            	<td width="150" align="right">单位或个人名称：</td>
+                                <td>王学锋</td>
+                            </tr>
+                            <tr>
+                            	<td align="right">联系地址：</td>
+                                <td>北京市朝阳区南新园2号楼3层</td>
+                            </tr>
+                            <tr>
+                            	<td align="right">邮政编码：</td>
+                                <td>100000</td>
+                            </tr>
+                            <tr>
+                            	<td align="right">联系电话：</td>
+                                <td>152*********</td>
+                            </tr>
+                            <tr>
+                            	<td align="right">传真号码：</td>
+                                <td>152*********</td>
+                            </tr>
+                            <tr>
+                            	<td align="right">注册日期：</td>
+                                <td>2016-5-17</td>
+                            </tr>
+                            <tr>
+                            	<td align="right">个人说明：</td>
+                                <td>这个人很懒，什么都没有留下~</td>
+                            </tr>
+                         </table>  
+                         <p align="center"><button class="btn btn-success">编辑</button></p>   
+                    </div>
+               </div>
+               
+                <!--账号安全-->
+               <div class="shoppingcart_board floatleft" style="display:none; height:780px" id="zhaq">
+                    <div class="user-lb-title">
+                        <span class="absotit">账号安全</span>
+                        <div class="floatleft sclb">在此您可以修改您的密码。</div>
+                    </div>
+                    <div class="floatleft" style="padding:10px; margin-left:20px; width:930px">
+                    	<table class="table table-striped table-hover table-bordered mytable">
+                         	<tr>
+                            	<td width="150" align="right">账号：</td>
+                                <td class="inputtd"><input type="text" placeholder="" disabled class="form-control"/></td>
+                            </tr>
+                            <tr>
+                            	<td align="right">密码：</td>
+                                <td class="inputtd"><input type="text" placeholder="" class="form-control"/></td>
+                            </tr>
+                            <tr>
+                            	<td align="right">新密码：</td>
+                                <td class="inputtd"><input type="text" placeholder="" class="form-control"/></td>
+                            </tr>
+                         </table>   
+                         <p align="center"><button class="btn btn-success">确定</button>&nbsp;&nbsp;<button class="btn btn-warning">重置</button></p>   
+                    </div>
+               </div>
+               
+               
+               
+          </div>
+        <!--body结束-->
+        <div class="clear"></div>
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document" style="width:300px">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">请输入新名称</h4>
+              </div>
+              <div class="modal-body">
+                <input type="text" class="form-control" style="width:260px" value="马铃薯"/>
+              </div>
+              <div class="modal-footer" style="text-align:center">
+                <button type="button" class="btn btn-success" data-dismiss="modal">确定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    	<!--时间选择器
+    	<input type="text" class="form-control Wdate displayib" style="width:110px" onclick="WdatePicker()" value="2016-01-01">
+        -->
+    	<!--表格
+        <table class="table table-striped table-hover table-bordered">
+        	<thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        -->
+        
+        
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">批量删除</h4>
+              </div>
+              <div class="modal-body">
+                <table class="table table-bordered table-hover table-striped" style="text-align:center">
+                	<tr>
+                    	<td width="20"><input type="checkbox"/></td>
+                        <td width="60">编号</td>
+                        <td>标题</td>
+                        <td>生成日期</td>
+                    </tr>
+                    <tr>
+                    	<td><input type="checkbox"/></td>
+                        <td>1</td>
+                        <td>我的数据1</td>
+                        <td>2016-5-15</td>
+                    </tr>
+                    <tr>
+                    	<td><input type="checkbox"/></td>
+                        <td>2</td>
+                        <td>我的数据1</td>
+                        <td>2016-5-15</td>
+                    </tr>
+                    <tr>
+                    	<td><input type="checkbox"/></td>
+                        <td>3</td>
+                        <td>我的数据1</td>
+                        <td>2016-5-15</td>
+                    </tr>
+                </table>
+              </div>
+              <div class="modal-footer" style="text-align:center;margin-top:0">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">删除</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <!--分页
+        <div style="clear:both; height:50px">
+            <div id="kkpager"></div>
+            <script type="text/javascript">
+                function getParameter(name) { 
+                    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+                    var r = window.location.search.substr(1).match(reg); 
+                    if (r!=null) return unescape(r[2]); return null;
+                }
+                
+                //init
+                $(function(){
+                    var totalPage = 20;
+                    var totalRecords = 390;
+                    var pageNo = getParameter('pno');
+                    if(!pageNo){
+                        pageNo = 1;
+                    }
+                    //初始化分页控件
+                    //有些参数是可选的，比如lang，若不传有默认值
+                    kkpager.init({
+                        pno : pageNo,
+                        //总页码
+                        total : totalPage,
+                        //总数据条数
+                        totalRecords : totalRecords,
+                        //链接前部
+                        hrefFormer : 'pagination',
+                        //链接尾部
+                        hrefLatter : '.html',
+                        getLink : function(n){
+                            return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                        },
+                        lang : {
+                            prePageText : '上一页',
+                            nextPageText : '下一页',
+                            totalPageBeforeText : '共',
+                            totalPageAfterText : '页',
+                            totalRecordsAfterText : '条数据',
+                            gopageBeforeText : '转到',
+                            gopageButtonOkText : '确定',
+                            gopageAfterText : '页',
+                            buttonTipBeforeText : '第',
+                            buttonTipAfterText : '页'
+                        }
+                    });
+                    //生成
+                    kkpager.generPageHtml();
+                });
+            </script>
+        </div>
+        -->
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+        copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div> 
+</body>
+</html>

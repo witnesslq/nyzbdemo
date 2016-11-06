@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大数据-展示</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html" class="selectweb">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain">
+    	<div class="configureMainbox">	
+            <div class="configureContenttitlebox">
+                <div class="configureContentlefttitle floatleft">
+                    <img src="img/menutitle.jpg"/> 功能菜单
+                </div>
+                <div class="configureContentrighttitle floatleft">
+                    <span class="absoluteTitle">新建专题</span>
+                </div>
+            </div>
+            <div class="configureContentmainbox">
+                <div class="configureContentleftmain">
+                    <ul>
+                        <li><a href="Sql-connect.html">数据库链接</a></li>
+                        <li><a href="Sql-configure.html">数据源配置</a></li>
+                        <li><a href="Sql-assembly.html">组件配置</a></li>
+                        <li><a href="Sql-exhibition.html">组件展示</a></li>
+                        <li><a href="classification.html" class="selectleftmenu">组件分组</a></li>
+                        <li><a href="Sql-base.html">知识库管理</a></li>
+                    </ul>
+                </div>
+                <div class="configureContentrightmain" style="padding-top:20px">
+					<div class="configureContentrightmain biglineheight">
+                        <table style="width:500px; margin:0 auto">
+                           <tbody>
+                                <tr>
+                                    <td width="120" align="right">专题名称： </td>
+                                    <td>
+                                        <input type="text" class="form-control"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">专题缩略图： </td>
+                                    <td>
+                                        <input type="file" class="form-control"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">初始热度： </td>
+                                    <td>
+                                        <input type="text" class="form-control" value="10000"/>
+                                    </td>
+                                </tr>
+                           </tbody>
+                        </table>
+                        <div class="Contentbottommenu">
+                        <table style="width:500px; margin:0 auto">
+                           <tbody>
+                                <tr>
+                                    <td width="120" align="right">专题简介： </td>
+                                    <td><textarea class="form-control" style="height:200px"></textarea></td>
+                                </tr>
+                           </tbody>
+                        </table>	
+                        </div>
+                        <div class="Contentbottommenu">
+                            <button class="btn btn-success" onclick="gotoplay('Sql-configure.html')">确定</button>
+                            <button class="btn btn-default" onclick="gotoplay('Sql-configure.html')">取消</button>
+                        </div>
+                    </div>            	   
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+        copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div>
+</body>
+</html>

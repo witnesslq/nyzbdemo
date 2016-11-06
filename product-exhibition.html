@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大数据-展示</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="175" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<a href="index.html">首页</a>
+                <a href="product.html">产品</a>
+                <a href="product-exhibition.html" class="selectweb">模型预览</a>	
+                <a href="adjustment.html">菜单管理</a>	
+                <div class="dataUser floatleft">
+                	<a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                    李大霄（英大证券研究所所长）</a>
+                    <a href="#">退出</a>
+            		<!--<a href="#">注册</a> <span>|</span> 
+                	<a href="#">登录</a>		-->
+            	</div>
+            </div>
+            
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain">
+    	<div class="configureMainbox" style="background:#FFF">
+        <!--body开始-->
+            <div class="shoppingcart_box">
+                <div class="shoppingcart_menu2 exhibition_menu_box floatleft">
+                 	<ul class="exhibition_menu">
+                    	<li><a href="#" class="exhibitionhover">监测预警</a></li>
+                        <li><a href="#">数据浏览</a></li>
+                        <li><a href="#">数据统计</a></li>
+                        <li><a href="#">检测器设置</a></li>
+                        <li><a href="#">侵染分析</a></li>
+                        <li><a href="#">测站信息</a></li>
+                        <li><a href="#">视频监控</a></li>
+                        <li><a href="#">预测模型</a></li>
+                    </ul>
+                </div>
+                
+                <div class="shoppingcart_board2 floatleft">
+                	<div class="shoppingcart_board2_box">
+                        <div class="fixetitle">
+                            <span class="fixetitlenum">1</span>GIS
+                        </div>
+                        <div id="myimg1" alt="图1">
+                            <div id="zuo2" style="height:360px; width:900px"></div>
+                            <script>
+                                var myChart2 = echarts.init(document.getElementById('zuo2'));
+                                    option2 = {
+                                        title : {text: '世界人口总量',subtext: '数据来自网络'},
+                                        tooltip : {trigger: 'axis'},
+                                        legend: {data:['2011年', '2012年']},
+                                        toolbox: {show : true,feature : {mark : {show: true},dataView : {show: true, readOnly: false},magicType: {show: true, type: ['line', 'bar']},restore : {show: true},saveAsImage : {show: true}}},
+                                        calculable : true,
+                                        xAxis : [{type : 'value',boundaryGap : [0, 0.01]}],
+                                        yAxis : [{type : 'category',data : ['巴西','印尼','美国','印度','中国','世界人口(万)']}],
+                                        series : [{name:'2011年',type:'bar',data:[18203, 23489, 29034, 104970, 131744, 630230]},{name:'2012年',type:'bar',data:[19325, 23438, 31000, 121594, 134141, 681807]}]
+                                    };            
+                                myChart2.setOption(option2);
+                            </script>	
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="shoppingcart_board2_box">
+                        <div class="fixetitle">
+                            <span class="fixetitlenum">2</span>列表
+                        </div>
+                        <div id="myimg1" alt="图1">
+                         	<table class="table table-bordered table-time">
+                                	<tbody><tr>
+                                    	<td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td class="colorred">
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：第三代一次侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td class="coloryellow">
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：第二代一次侵染</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                        <td>
+                                        	<span class="table-time-title">北赔金刀峡</span>
+                                            <span>时间：2016-1-21 14:00</span>
+                                            <span>侵染：无侵染</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                             </table>   
+                        </div>
+                    </div>
+                    
+                    <div class="shoppingcart_board2_box">
+                        <div class="fixetitle">
+                            <span class="fixetitlenum">3</span>侵染历史同期
+                        </div>
+                        <div id="myimg1" alt="图1">
+                         	<table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">省</th>
+                                        <th rowspan="2">市</th>
+                                        <th colspan="2">2015</th>
+                                        <th colspan="2">2014</th>
+                                        <th colspan="2">2013</th>
+                                        <th colspan="2">2012</th>
+                                    </tr>
+                                    <tr>
+                                        <th>三代及以上(个)</th>
+                                        <th>所占百分比</th>
+                                        <th>三代及以上(个)</th>
+                                        <th>所占百分比</th>
+                                        <th>三代及以上(个)</th>
+                                        <th>所占百分比</th>
+                                        <th>三代及以上(个)</th>
+                                        <th>所占百分比</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                    </tr>
+                                </tbody>
+                            </table>   
+                        </div>
+                    </div>
+                    
+                    <div class="shoppingcart_board2_box">
+                        <div class="fixetitle">
+                            <span class="fixetitlenum">4</span>有无侵染城市
+                        </div>
+                        <div id="myimg1" alt="图1">
+                         	<table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>地点</th>
+                                        <th>无侵染</th>
+                                        <th>侵染</th>
+                                        <th>地点</th>
+                                        <th>无侵染</th>
+                                        <th>侵染</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>重庆</td>
+                                        <td>无侵染：98</td>
+                                        <td>三代以上：1</td>
+                                        <td>重庆</td>
+                                        <td>无侵染：98</td>
+                                        <td>三代以上：1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>重庆</td>
+                                        <td>无侵染：98</td>
+                                        <td>三代以上：1</td>
+                                        <td>重庆</td>
+                                        <td>无侵染：98</td>
+                                        <td>三代以上：1</td>
+                                    </tr>
+                                </tbody>
+                            </table>   
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        <!--body结束-->
+        <div class="clear"></div>
+    	<!--时间选择器
+    	<input type="text" class="form-control Wdate displayib" style="width:110px" onclick="WdatePicker()" value="2016-01-01">
+        -->
+        
+    	<!--表格
+        <table class="table table-striped table-hover table-bordered">
+        	<thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        -->
+        
+        
+    	<!--弹出框
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">标题</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+        
+        <!--分页
+        <div style="clear:both; height:50px">
+            <div id="kkpager"></div>
+            <script type="text/javascript">
+                function getParameter(name) { 
+                    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+                    var r = window.location.search.substr(1).match(reg); 
+                    if (r!=null) return unescape(r[2]); return null;
+                }
+                
+                //init
+                $(function(){
+                    var totalPage = 20;
+                    var totalRecords = 390;
+                    var pageNo = getParameter('pno');
+                    if(!pageNo){
+                        pageNo = 1;
+                    }
+                    //初始化分页控件
+                    //有些参数是可选的，比如lang，若不传有默认值
+                    kkpager.init({
+                        pno : pageNo,
+                        //总页码
+                        total : totalPage,
+                        //总数据条数
+                        totalRecords : totalRecords,
+                        //链接前部
+                        hrefFormer : 'pagination',
+                        //链接尾部
+                        hrefLatter : '.html',
+                        getLink : function(n){
+                            return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                        },
+                        lang : {
+                            prePageText : '上一页',
+                            nextPageText : '下一页',
+                            totalPageBeforeText : '共',
+                            totalPageAfterText : '页',
+                            totalRecordsAfterText : '条数据',
+                            gopageBeforeText : '转到',
+                            gopageButtonOkText : '确定',
+                            gopageAfterText : '页',
+                            buttonTipBeforeText : '第',
+                            buttonTipAfterText : '页'
+                        }
+                    });
+                    //生成
+                    kkpager.generPageHtml();
+                });
+            </script>
+        </div>
+        -->
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bottommain">
+            <tbody>
+                <tr>
+                    <td><a href="#"><strong>关于我们</strong></a></td>
+                    <td><a href="#"><strong>大数据联盟</strong></a></td>
+                    <td><strong>公司信息</strong></td>
+                    <td><a href="#">微信公众号</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">关于金禾天成</a></td>
+                    <td><a href="#">人大信息学院</a></td>
+                    <td>电话010-82837689/90</td>
+                    <td><a href="#">腾讯微博</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">联系我们</a></td>
+                    <td><a href="#">农技中心</a></td>
+                    <td>技术支持邮箱：support@jinhetech.com</td>
+                    <td><a href="#">新浪微博</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">招聘英才</a></td>
+                    <td><a href="#">农科院</a></td>
+                    <td>公司联系地址：海淀区学清路甲38号金码大厦A801</td>
+                    <td><a href="#">QQ公众号</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#">农业大学</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="bottombottom">
+        	<tbody>
+            	<tr>
+            		<td>本站所有经过分析处理的数据及分析结果（包括但不限于简报、走势、量价分析数据）均为南京绿色科技研究院有限公司所有，未经授权请勿复制、转载利用。违者我方有权追究法律责任！<br>
+                			copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+               		 </td>
+           	    </tr>
+       	    </tbody>
+        </table>
+    </div> 
+</body>
+</html>

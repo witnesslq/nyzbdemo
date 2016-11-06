@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>模板制作</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css"/>
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html" class="selectweb">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html">数据运营平台</a>		
+                     <a href="#">云数据开放平台</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain">
+    	<div class="configureMainbox">
+        	<div class="configureContenttitlebox" style="background:#fff">
+                <div class="cclsm">
+        			请从下面的图表类型中选择一个开始自定义数据。
+                </div>
+            </div>
+        	<!--body开始-->
+            <div class="shoppingcart_box" style="padding:10px">
+            	<ul id="myTabs" class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#1" role="tab" data-toggle="tab" aria-expanded="true">散点图</a></li>
+                  <li role="presentation"><a href="#2" role="tab" data-toggle="tab">柱状图</a></li>
+                  <li role="presentation"><a href="#3" role="tab" data-toggle="tab">折线图</a></li>
+                  <li role="presentation"><a href="#4" role="tab" data-toggle="tab">地图</a></li>
+                  <li role="presentation"><a href="#5" role="tab" data-toggle="tab">饼图</a></li>
+                  <li role="presentation"><a href="#6" role="tab" data-toggle="tab">雷达图</a></li>
+                  <li role="presentation"><a href="#7" role="tab" data-toggle="tab">K线图</a></li>
+                  <li role="presentation"><a href="#8" role="tab" data-toggle="tab">箱形图</a></li>
+                  <li role="presentation"><a href="#9" role="tab" data-toggle="tab">热力图</a></li>
+                  <li role="presentation"><a href="#10" role="tab" data-toggle="tab">关系图</a></li>
+                  <li role="presentation"><a href="#11" role="tab" data-toggle="tab">矩形树图</a></li>
+                  <li role="presentation"><a href="#12" role="tab" data-toggle="tab">平行坐标</a></li>
+                  <li role="presentation"><a href="#13" role="tab" data-toggle="tab">桑基图</a></li>
+                  <li role="presentation"><a href="#14" role="tab" data-toggle="tab">漏斗图</a></li>
+                  <li role="presentation"><a href="#15" role="tab" data-toggle="tab">仪表盘</a></li>
+                </ul> 
+                <div id="myTabContent" class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="1">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                             <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-4.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-8.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">饼图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-8.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">饼图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="2" aria-labelledby="profile-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="3" aria-labelledby="dropdown1-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="4" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="5" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="6" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="7" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="8" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="9" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="10" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="11" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="12" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="13" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="14" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="15" aria-labelledby="dropdown2-tab">
+                    <div class="classbox2">
+                        <ul>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-7.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">点图</a></h3>
+                            </li>
+                            <li>
+                                <a href="templates2.html"><img src="img/assemblyimg/sdt-2.png" width="185" height="170"></a>
+                                <h3><a href="templates2.html">折线图</a></h3>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        	<!--body结束-->
+        	<div class="clear"></div>
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bottommain">
+            <tbody>
+                <tr>
+                    <td><a href="#"><strong>关于我们</strong></a></td>
+                    <td><a href="#"><strong>大数据联盟</strong></a></td>
+                    <td><strong>公司信息</strong></td>
+                    <td><a href="#">微信公众号</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">关于金禾天成</a></td>
+                    <td><a href="#">人大信息学院</a></td>
+                    <td>电话010-82837689/90</td>
+                    <td><a href="#">腾讯微博</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">联系我们</a></td>
+                    <td><a href="#">农技中心</a></td>
+                    <td>技术支持邮箱：support@jinhetech.com</td>
+                    <td><a href="#">新浪微博</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">招聘英才</a></td>
+                    <td><a href="#">农科院</a></td>
+                    <td>公司联系地址：海淀区学清路甲38号金码大厦A801</td>
+                    <td><a href="#">QQ公众号</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="#">农业大学</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="bottombottom">
+        	<tbody>
+            	<tr>
+            		<td>本站所有经过分析处理的数据及分析结果（包括但不限于简报、走势、量价分析数据）均为南京绿色科技研究院有限公司所有，未经授权请勿复制、转载利用。违者我方有权追究法律责任！<br>
+                			copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+               		 </td>
+           	    </tr>
+       	    </tbody>
+        </table>
+    </div> 
+</body>
+</html>

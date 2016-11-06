@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>模板制作</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css"/>
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html" class="selectweb">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html">数据运营平台</a>		
+                     <a href="#">云数据开放平台</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain">
+    	<div class="configureMainbox">
+        	<!--body开始-->
+            <div class="configureContenttitlebox">
+        		<div class="cclsm">
+        			点击下载模板，填写好数据以后，点击马上制作来生成图表。
+                </div>
+        	</div>
+            <div class="configureContentmainbox">
+                <div class="configureContentrightmain" style="width:1200px">
+                    <script src="assembly/echarts/echarts-all.js"></script>  
+                    <div class="floatleft" style="padding:10px; border:1px solid #CCC; margin-left:20px; background:#F0F0F0">
+                        <div id="zuo" style="height:360px; width:1100px" ></div>
+                    </div>
+                    <script>
+                        var myChart = echarts.init(document.getElementById('zuo'));
+                        option = {
+                        title : {
+                            text: '某站点用户访问来源',
+                            subtext: '纯属虚构',
+                            x:'center'
+                        },
+                        tooltip : {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        legend: {
+                            orient : 'vertical',
+                            x : 'left',
+                            data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+                        },
+                        toolbox: {
+                            show : true,
+                            feature : {
+                                mark : {show: true},
+                                dataView : {show: true, readOnly: false},
+                                magicType : {
+                                    show: true, 
+                                    type: ['pie', 'funnel'],
+                                    option: {
+                                        funnel: {
+                                            x: '25%',
+                                            width: '50%',
+                                            funnelAlign: 'left',
+                                            max: 1548
+                                        }
+                                    }
+                                },
+                                restore : {show: true},
+                                saveAsImage : {show: true}
+                            }
+                        },
+                        calculable : true,
+                        series : [
+                            {
+                                name:'访问来源',
+                                type:'pie',
+                                radius : '55%',
+                                center: ['50%', '60%'],
+                                data:[
+                                    {value:335, name:'直接访问'},
+                                    {value:310, name:'邮件营销'},
+                                    {value:234, name:'联盟广告'},
+                                    {value:135, name:'视频广告'},
+                                    {value:1548, name:'搜索引擎'}
+                                ]
+                            }
+                        ]
+                    };
+                        myChart.setOption(option);
+                    </script>
+                </div>
+                <div class="clear"></div>
+            </div>
+        	<!--body结束-->
+        	<div class="clear"></div>
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+		copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div> 
+</body>
+</html>

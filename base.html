@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大数据-定制</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/docs.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>		
+                     <a href="base.html" class="selectweb">知识库</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain" style="margin-top:20px; margin-bottom:20px;">
+    	<div class="configureMainbox" style="border:0;  background:none">
+        <!--body开始-->
+            <div class="shoppingcart_box">
+                
+               <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                 <tbody>
+                    <tr>
+                        <td valign="top" >
+                            <div id="ztreehide" class="xxl_left" style="width:200px">
+                          		<div>
+                                  <h1 class="tm2">主要农作物</h1> 
+                                  <div class="yogurt_elementsbox_core clear" style="position: relative; min-height: 450px;">
+                                    <div class="yogurt_zsk_left_box">
+                                         <ul>
+                                            <li><img src="img/control_right.gif" onClick="zkul(this)"><a href="#"><span>水稻</span></a>
+                                            	<ul>
+                                                	<li><a href="#">水稻下级目录1</a></li>
+                                                    <li><a href="#">水稻下级目录2</a></li>
+                                                    <li><a href="#">水稻下级目录3</a></li>
+                                                    <li><a href="#">水稻下级目录4</a></li>
+                                                    <li><a href="#">水稻下级目录5</a></li>
+                                                    <li><a href="#">水稻下级目录6</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>小麦</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>玉米</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>油菜</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>萝卜</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>菠菜</span></a></li>
+                                            <li><img src="img/control_right.gif" onClick="zkul(this)"><a href="#"><span>大蒜</span></a>
+                                            	<ul>
+                                                	<li><a href="#">大蒜下级目录1</a></li>
+                                                    <li><a href="#">大蒜下级目录2</a></li>
+                                                    <li><a href="#">大蒜下级目录3</a></li>
+                                                    <li><a href="#">大蒜下级目录4</a></li>
+                                                    <li><a href="#">大蒜下级目录5</a></li>
+                                                    <li><a href="#">大蒜下级目录6</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>芹菜</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>茴香</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>番茄</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>苦菜</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>菊苣</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>大白菜</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>苋菜</span></a></li>
+                                            <li><img src="img/control_right2.gif"><a href="#"><span>茄子</span></a></li>
+                                          </ul>   
+                                          <script>
+										  	function zkul(obj){
+												if($(obj).attr("src")=="img/control_right.gif"){
+													$(obj).attr("src","img/xia.gif");
+													$(obj).siblings("ul").css("display","block");
+													return;
+												}
+												$(obj).attr("src","img/control_right.gif");
+												$(obj).siblings("ul").css("display","none");
+											}
+										  </script>
+                                    </div>
+                                  </div>
+                              </div>
+                        	</div>
+                        </td>
+                        <td valign="top">
+                        	<div class="xxl_right" style="width:980px">
+                            	<h1 class="tm3">知识库列表</h1>
+                                <div class="clear zsk-ss" style="padding:10px">
+                                    <table width="100%">
+                                        <tbody><tr>
+                                            <td style="padding-bottom:10px" align="right">
+                                                <input type="text" class="form-control inblock" style="width:600px"><button class="btn btn-success" style="padding-left:25px; padding-right:25px">搜索</button> 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="clear">
+                                                   <div class="floatleft"> 
+                                                   		<span class="ssbold">热门搜索：<a href="#">二化螟</a> <a href="#">水稻</a> <a href="#">螟虫</a> <a href="#">茭白</a> <a href="#">菌核</a> <a href="#">菌核以少数</a></span>
+                                                   		
+                                                   </div>
+                                                   <div class="floatright"><input type="checkbox">病原菌特征&nbsp;&nbsp;<input type="checkbox">发生特征&nbsp;&nbsp;<input type="checkbox">形态特征&nbsp;&nbsp;&nbsp;<a href="#" style="font-size:12px; color:#33C9E3; text-decoration:underline">在结果中搜索</a></div>
+                                                </div>
+                                           </td>
+                                        </tr>
+                                    </tbody></table>
+                                </div>
+                                <div style="margin-top:10px; border:0; padding:10px">
+                                    <div class="con2">
+                                        <ul class="list">
+                                           <li>
+                                               <div class="list_l">
+                                               <a href="base2.html"><img src="img/zsk/p1.jpg"></a></div>
+                                               <div class="list_r">
+                                               <h1 class="sty2"><a href="base2.html">稻瘟病</a></h1>
+                                               <div class="sty3">病害名称： 稻瘟病 |  拉丁文名： Rice blast | 英文名称：无 </div>
+                                               <div class="con3"> <b>危害症状:</b>危害症状： 主要为害叶片、茎秆、穗部。因为害时期、部位不同分为苗瘟、叶瘟、节瘟、穗颈瘟、谷粒瘟。苗瘟发生于
+                                                 三叶前，由种子带菌所致。病苗基部灰黑，上病原真菌变褐，卷缩而死，湿度较大时病部产生大量灰黑色霉层， 即
+                                                 病原菌分生孢子梗和分生孢子......<br>
+                                               </div>
+                                               <div class="sty4"><a href="base2.html">详细内容 </a> | 阅读次数：<span class="sty5">16</span></div>
+                                             </div>
+                                          </li>
+                                          <li>
+                                            <div class="list_l"><a href="base2.html"><img src="img/zsk/p2.jpg"></a></div>
+                                            <div class="list_r">
+                                                   <h1 class="sty2"><a href="base2.html">稻纹枯病</a></h1>
+                                                   <div class="sty3">病害名称： 稻纹枯病 | 拉丁文名： Rice sheath blight | 英文名称：无</div>
+                                                   <div class="con3">
+                                                   <b>危害症状:</b>一般在分蘖期到抽穗期盛发，先在近水面的叶鞘上出现暗绿色水侵状小斑点，以后逐渐扩大呈长
+                                    椭圆形的纹状病斑。病斑边缘呈褐色，中央淡褐色到灰白色，潮湿时病斑呈灰绿色，水侵状半透明。以后病斑逐
+                                    渐增多，互相连成一片不规则的云纹，向稻株上部发展。病部表面可形成由菌丝集结交织成的菌核。<br>
+                                                   </div>
+                                                    <div class="sty4"><a href="base2.html">详细内容 </a> | 阅读次数：<span class="sty5">16</span></div>
+                                              </div>
+                                          </li>
+                                          <li>
+                                             <div class="list_l"><a href="base2.html"><img src="img/zsk/p3.jpg"></a></div>
+                                             <div class="list_r">
+                                               <h1 class="sty2"><a href="base2.html">稻曲病</a></h1>
+                                               <div class="sty3">病害名称： 稻曲病 | 拉丁文名： Rice false smut | 英文名称：无</div>
+                                               <div class="con3">
+                                               <b>危害症状:</b>又称伪黑穗病、绿黑穗病、谷花病、青粉病，俗称“丰产果”。该病只发生于水稻穗部，为害部分谷粒。
+                                受害谷粒内形成菌丝块渐膨大，内外颖裂开，露出淡黄色块状物，即孢子座，后包于内外颖两侧，呈黑绿色，初外
+                                包一层薄膜，后破裂，散生墨绿色粉末，即病菌的厚垣孢子，有的两侧生黑色扁平菌核，风吹雨打易脱落。
+                                <br>
+                                              </div>
+                                             <div class="sty4"><a href="base2.html">详细内容 </a> | 阅读次数：<span class="sty5">16</span></div>
+                                             </div>
+                                         </li>
+                                         <li>
+                                               <div class="list_l">
+                                               <a href="base2.html"><img src="img/zsk/p1.jpg"></a></div>
+                                               <div class="list_r">
+                                               <h1 class="sty2"><a href="base2.html">稻瘟病</a></h1>
+                                               <div class="sty3">病害名称： 稻瘟病 |  拉丁文名： Rice blast | 英文名称：无 </div>
+                                               <div class="con3"> <b>危害症状:</b>危害症状： 主要为害叶片、茎秆、穗部。因为害时期、部位不同分为苗瘟、叶瘟、节瘟、穗颈瘟、谷粒瘟。苗瘟发生于
+                                                 三叶前，由种子带菌所致。病苗基部灰黑，上病原真菌变褐，卷缩而死，湿度较大时病部产生大量灰黑色霉层， 即
+                                                 病原菌分生孢子梗和分生孢子......<br>
+                                               </div>
+                                               <div class="sty4"><a href="base2.html">详细内容 </a> | 阅读次数：<span class="sty5">16</span></div>
+                                             </div>
+                                          </li>
+                                          <li>
+                                            <div class="list_l"><a href="base2.html"><img src="img/zsk/p2.jpg"></a></div>
+                                            <div class="list_r">
+                                                   <h1 class="sty2"><a href="base2.html">稻纹枯病</a></h1>
+                                                   <div class="sty3">病害名称： 稻纹枯病 | 拉丁文名： Rice sheath blight | 英文名称：无</div>
+                                                   <div class="con3">
+                                                   <b>危害症状:</b>一般在分蘖期到抽穗期盛发，先在近水面的叶鞘上出现暗绿色水侵状小斑点，以后逐渐扩大呈长
+                                    椭圆形的纹状病斑。病斑边缘呈褐色，中央淡褐色到灰白色，潮湿时病斑呈灰绿色，水侵状半透明。以后病斑逐
+                                    渐增多，互相连成一片不规则的云纹，向稻株上部发展。病部表面可形成由菌丝集结交织成的菌核。<br>
+                                                   </div>
+                                                    <div class="sty4"><a href="base2.html">详细内容 </a> | 阅读次数：<span class="sty5">16</span></div>
+                                              </div>
+                                          </li>
+                                          <li style="border:0">
+                                             <div class="list_l"><a href="base2.html"><img src="img/zsk/p3.jpg"></a></div>
+                                             <div class="list_r">
+                                               <h1 class="sty2"><a href="base2.html">稻曲病</a></h1>
+                                               <div class="sty3">病害名称： 稻曲病 | 拉丁文名： Rice false smut | 英文名称：无</div>
+                                               <div class="con3">
+                                               <b>危害症状:</b>又称伪黑穗病、绿黑穗病、谷花病、青粉病，俗称“丰产果”。该病只发生于水稻穗部，为害部分谷粒。
+                                受害谷粒内形成菌丝块渐膨大，内外颖裂开，露出淡黄色块状物，即孢子座，后包于内外颖两侧，呈黑绿色，初外
+                                包一层薄膜，后破裂，散生墨绿色粉末，即病菌的厚垣孢子，有的两侧生黑色扁平菌核，风吹雨打易脱落。
+                                <br>
+                                              </div>
+                                             <div class="sty4"><a href="base2.html">详细内容 </a> | 阅读次数：<span class="sty5">16</span></div>
+                                             </div>
+                                         </li>
+                                      </ul>
+                                      <div class="clear"></div>
+                                      <div style="clear:both; height:50px">
+                                        <!--加载分页组件-->
+                                        <div id="kkpager">&nbsp;每页显示<select style="padding:0px;height:27px;width:60px;display:inline-block; margin:auto 5px auto 5px" class="form-control" onchange="returnoption(this.value)" id="mykkpagerselect"><option value="5">5</option><option value="10" selected="selected">10</option><option value="50">50</option><option value="全部">全部</option></select>条 <span class="disabled">上一页</span><span class="curr">1</span><a href="pagination.html?pno=2" title="第2页">2</a><a href="pagination.html?pno=3" title="第3页">3</a><a href="pagination.html?pno=4" title="第4页">4</a><a href="pagination.html?pno=5" title="第5页">5</a><a href="pagination.html?pno=6" title="第6页">6</a><a href="pagination.html?pno=7" title="第7页">7</a><span>...</span><a href="pagination.html?pno=2" title="下一页">下一页</a><span class="normalsize">共20页&nbsp;/&nbsp;390条数据</span>&nbsp;转到<span id="kkpager_gopage_wrap"><input type="button" id="kkpager_btn_go" onclick="kkpager.gopage()" value="确定"><input type="text" id="kkpager_btn_go_input" onfocus="kkpager.focus_gopage()" onkeypress="if(event.keyCode<48 || event.keyCode>57)return false;" onblur="kkpager.blur_gopage()" value="2"></span>页</div>
+                                        <script type="text/javascript">
+                                            function getParameter(name) { 
+                                                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+                                                var r = window.location.search.substr(1).match(reg); 
+                                                if (r!=null) return unescape(r[2]); return null;
+                                            }
+                                            
+                                            //init
+                                            $(function(){
+                                                var totalPage = 20;
+                                                var totalRecords = 390;
+                                                var pageNo = getParameter('pno');
+                                                if(!pageNo){
+                                                    pageNo = 1;
+                                                }
+                                                //初始化分页控件
+                                                //有些参数是可选的，比如lang，若不传有默认值
+                                                kkpager.init({
+                                                    pno : pageNo,
+                                                    //总页码
+                                                    total : totalPage,
+                                                    //总数据条数
+                                                    totalRecords : totalRecords,
+                                                    //链接前部
+                                                    hrefFormer : 'pagination',
+                                                    //链接尾部
+                                                    hrefLatter : '.html',
+                                                    getLink : function(n){
+                                                        return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                                                    },
+                                                    lang : {
+                                                        prePageText : '上一页',
+                                                        nextPageText : '下一页',
+                                                        totalPageBeforeText : '共',
+                                                        totalPageAfterText : '页',
+                                                        totalRecordsAfterText : '条数据',
+                                                        gopageBeforeText : '转到',
+                                                        gopageButtonOkText : '确定',
+                                                        gopageAfterText : '页',
+                                                        buttonTipBeforeText : '第',
+                                                        buttonTipAfterText : '页'
+                                                    }
+                                                });
+                                                //生成
+                                                kkpager.generPageHtml();
+                                            });
+                                        </script>
+                            <!--分页结束-->
+                                    </div>
+                                  </div>
+                               </div>
+                           </div>
+                        </td>
+              <!--右侧内容结束-->      
+                  </tr>
+                </tbody>
+              </table>
+               
+               
+               
+                
+            </div>
+        <!--body结束-->
+        <div class="clear"></div>
+    	
+        </div>
+	</div>
+
+    <!--bototm-->
+    <div class="configureBottom">
+        <table class="bottombottom">
+        	<tbody>
+            	<tr>
+            		<td>本站所有经过分析处理的数据及分析结果（包括但不限于简报、走势、量价分析数据）均为南京绿色科技研究院有限公司所有，未经授权请勿复制、转载利用。违者我方有权追究法律责任！<br>
+                			copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+               		 </td>
+           	    </tr>
+       	    </tbody>
+        </table>
+    </div> 
+</body>
+</html>

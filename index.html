@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大数据</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css"/>
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign">
+                            <a href="#" onClick="openwindall(1)">登录</a>
+                            <span>|</span> 	
+                            <a href="introduce.html">平台介绍</a>
+                        </div>
+                        <div id="signUser" style="display:none">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html" class="selectweb">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>	
+                     <a href="base.html">知识库</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain2">
+    	<div class="banner">
+        	<link href="assembly/pictureScroll2/css/lrtk.css" rel="stylesheet" type="text/css" />
+        	<!--图片滚动1
+            <script type="text/javascript" src="assembly/pictureScroll2/js/lrtk.js"></script>
+            <div class="slide-main" id="touchMain">
+                <a class="prev" href="javascript:;" stat="prev1001"><img src="assembly/pictureScroll2/images/l-btn.png" /></a>
+                <div class="slide-box" id="slideContent">
+                    <div class="slide" id="bgstylec">
+                        <a stat="sslink-3" href="product2.html">
+                            <div class="obj-e"><img src="assembly/pictureScroll2/images/baomi-t-1.png" /></div>
+                            <div class="obj-f"><img src="assembly/pictureScroll2/images/baomi-kl.png" /></div>
+                        </a>
+                    </div>
+                    <div class="slide" id="bgstylea">
+                        <a stat="sslink-1" href="product2.html">
+                            <div class="obj-a"><img src="assembly/pictureScroll2/images/bao.png" /></div>
+                            <div class="obj-b"><img src="assembly/pictureScroll2/images/nt-1.png" /></div>
+                        </a>
+                    </div>
+                    <div class="slide" id="bgstyleb">
+                        <a stat="sslink-2" href="product2.html">
+                            <div class="obj-c"><img src="assembly/pictureScroll2/images/bao-2.png" /></div>
+                            <div class="obj-d"><img src="assembly/pictureScroll2/images/st-2.png" /></div>
+                        </a>
+                    </div>
+                    <div class="slide" id="bgstyled">
+                        <a stat="sslink-2" href="product2.html">
+                            <div class="obj-X"><img src="assembly/pictureScroll2/images/bao-2.png" /></div>
+                            <div class="obj-Z"><img src="assembly/pictureScroll2/images/st-2.png" /></div>
+                        </a>
+                    </div>
+                </div>
+                <a class="next" href="javascript:;" stat="next1002"><img src="assembly/pictureScroll2/images/r-btn.png" /></a>
+                <div class="item">
+                    <a class="cur" stat="item1001" href="javascript:;"></a><a href="javascript:;" stat="item1002"></a><a href="javascript:;" stat="item1003"></a>
+                </div>
+                滚动结束--> 
+                <link rel="stylesheet" type="text/css" href="assembly/pictureScroll3/css/jquery.jslides.css" media="screen" />
+                <script type="text/javascript" src="assembly/pictureScroll3/js/jquery.jslides.js"></script>
+                <div id="full-screen-slider">
+                    <ul id="slides">
+                        <li style="background:url(assembly/pictureScroll3/images/01.jpg) no-repeat center top"><a href="product2.html" target="_blank">专业大数据分析系统</a></li>
+                        <li style="background:url(assembly/pictureScroll3/images/02.jpg) no-repeat center top"><a href="collection.html" target="_blank">大数据分析能力开放系统</a></li>
+                        <li style="background:url(assembly/pictureScroll3/images/03.jpg) no-repeat center top"><a href="Sql-connect.html" target="_blank">数据运营平台</a></li>
+                        <li style="background:url(assembly/pictureScroll3/images/04.jpg) no-repeat center top"><a href="openplatform.html" target="_blank">云数据开放平台</a></li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    	<div class="configureMainbox2" style="margin-top:20px">
+        <!--body开始-->
+            <div class="classbox" id="cp">
+            	<div class="indexleft" style="background:#FFF; width:890px; padding:10px">
+                	<div class="zttjbox"><div class="zttj"><span class="indexlefttitleh2"><img src="img/zttj.png" width="180" height="33"/></span></div></div>
+                	<div class="indexlefttitle">
+                    	<span class="indexlefttitleh1">水稻稻飞虱专题</span>
+                        <button class="btn btn-default floatright btn-sm" onClick="gotoplay('product.html')">更多..</button>
+                    </div>
+                	<ul>
+                	<li>
+                    	<a href="product3.html" class="tubox"><img src="img/tu/1.jpg"/></a>
+                        <h3><a href="product.html">稻飞虱发生面积</a></h3>
+                        <span><a href="product.html">稻飞虱长翅型成虫均能长距离迁飞。趋光性强，且喜趋嫩绿；但灰飞虱的趋光性稍弱。</a></span>
+                    </li>
+                    <li>
+                    	<a href="product3.html"><img src="img/tu/2.jpg"/></a>
+                        <h3><a href="product.html">稻飞虱发生地区</a></h3>
+                        <span><a href="product.html">在华中稻区，迟熟早稻常易受害。灰飞虱为温带地区的害虫，适温为25℃左右，耐低温能力较强，而夏季高温则对其发育不利，华北地区7～8月降雨少的年份有利于大发生。</a></span>
+                    </li>
+                    <li>
+                    	<a href="product3.html"><img src="img/tu/3.jpg"/></a>
+                        <h3><a href="product3.html">稻飞虱逐年发生情况</a></h3>
+                        <span><a href="product3.html">稻飞虱的发生与迁入虫量、气候、水稻品种和生育期、栽培管理技术、天敌有密切关系。</a></span>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                <div class="indexlefttitle">
+                    	<span class="indexlefttitleh1">马铃薯晚疫病专题</span>
+                        <button class="btn btn-default floatright btn-sm" onClick="gotoplay('product.html')">更多..</button>
+                    </div>
+                	<ul>
+                        <li>
+                            <a href="product3.html"><img src="img/tu/4.jpg"/></a>
+                            <h3><a href="product3.html">马铃薯晚疫病发生面积</a></h3>
+                            <span><a href="product3.html">病菌喜日暖夜凉高湿条件，相对湿度95%以上、18～22℃条件下，有利于孢子囊的形成，冷凉（10～13℃，保持1～2小时）又有水滴存在。</a></span>
+                        </li>
+                        <li>
+                            <a href="product3.html"><img src="img/tu/5.jpg"/></a>
+                            <h3><a href="product3.html">马铃薯晚疫病灾害区域</a></h3>
+                            <span><a href="product3.html">病菌主要以菌丝体在薯块中越冬。播种带菌薯块，导致不发芽或发芽后出土即死去，有的出土后成为中心病株。</a></span>
+                        </li>
+                        <li>
+                            <a href="product3.html"><img src="img/tu/6.jpg"/></a>
+                            <h3><a href="product3.html">马铃薯晚疫病发生时期</a></h3>
+                            <span><a href="product3.html">选用无病种薯，减少初侵染源。做到秋收入窖、冬藏查窖、出窖、切块、春化等过程中，每次都要严格剔除病薯，有条件的要建立无病留种地，进行无病留种。</a></span>
+                        </li>
+                	</ul>
+                </div>
+                <div class="indexright">
+                	<div class="indexrighttitle"><a href="more3.html">人气专题</a></div>
+                    <div class="indexrightbody" style="padding-bottom:30px">
+                    	<div>
+                            <table>
+                                <tr>
+                                    <td >
+                                        <a href="product3.html"><img src="img/tu/2-1.jpg"/></a>
+                                    </td>
+                                    <td>
+                                    	<h3><a href="product3.html">稻飞虱迁移路径</a></h3>
+                                        <span><a href="product3.html" class="txtindent">稻飞虱属同翅目飞虱科。危害水稻的主要有褐飞虱、白背飞虱和灰飞虱三种..</a></span>
+                                        <span class="indexrightrd">
+                                       		热度 <span class="badge">4202</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <a href="product3.html"><img src="img/tu/2-2.jpg"  width="100" height="100"/></a>
+                                    </td>
+                                    <td>
+                                        <h3><a href="product3.html">稻飞虱分布</a></h3>
+                                        <span><a class="txtindent" href="product3.html">中国北方，长江流域以南各省(自治区)发生较多。朝鲜、南亚次大陆和东南..</a></span>
+                                        <span class="indexrightrd">
+                                       		热度 <span class="badge">3338</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- <p align="center"><button type="button" class="btn btn-default btn-xs">全部人气专题</button></p>-->
+                    </div>
+                    <div class="indexrighttitle"><a href="more2.html">专业报告</a></div>
+                    <div class="indexrightbody" style="padding-bottom:30px">
+                    	<div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <a href="preview.html"><img src="img/tu/2-3.jpg"  width="100" height="100"/></a>
+                                    </td>
+                                    <td>
+                                        <h3><a href="preview.html">稻飞虱的危害有多大</a></h3>
+                                        <span><a href="preview.html" class="txtindent">白背飞虱迁入虫量是左右主害代发生程度的重要基础，而决定种群发展前提是食料..</a></span>
+                                        <span class="indexrightrd">
+                                       		热度 <span class="badge">1489</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <a href="preview.html"><img src="img/tu/2-4.jpg"  width="100" height="100"/></a>
+                                    </td>
+                                    <td>
+                                        <h3><a href="preview.html">稻飞虱主要影响地区</a></h3>
+                                        <span><a href="preview.html" class="txtindent">稻飞虱属同翅目飞虱科。危害水稻的主要有褐飞虱、白背飞虱和灰飞虱三种..</a></span>
+                                        <span class="indexrightrd">
+                                       		热度 <span class="badge">1020</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--<p align="center"><button type="button" class="btn btn-default btn-xs">全部专业报告</button></p>-->
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        <!--body结束-->
+        <div class="clear"></div>
+        <!--登录框开始-->
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document" style="width:280px">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">请登录..</h4>
+              </div>
+              <div class="modal-body uesr-dlk">
+              	<img src="img/user/dx2.png" width="150" height="150"/>
+                <table>
+                	<tr>
+                    	<td>账号：</td>
+                        <td><input type="text" class="form-control"/></td>
+                    </tr>
+                    <tr>
+                    	<td>密码：</td>
+                        <td><input type="password" class="form-control" /></td>
+                    </tr>
+                </table>
+              </div>
+              <div class="modal-footer" style="text-align:center">
+                <button type="button" class="btn btn-success" onClick="sign();closswindall(1)">确定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+			function sign(){
+				$("#sign").hide();
+				$("#signUser").show()	;
+			}
+		</script>
+        <!--登录框结束-->
+    	<!--时间选择器
+    	<input type="text" class="form-control Wdate displayib" style="width:110px" onclick="WdatePicker()" value="2016-01-01">
+        -->
+    	<!--表格
+        <table class="table table-striped table-hover table-bordered">
+        	<thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        -->
+        <!--分页
+        <div style="clear:both; height:50px">
+            <div id="kkpager"></div>
+            <script type="text/javascript">
+                function getParameter(name) { 
+                    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+                    var r = window.location.search.substr(1).match(reg); 
+                    if (r!=null) return unescape(r[2]); return null;
+                }
+                //init
+                $(function(){
+                    var totalPage = 20;
+                    var totalRecords = 390;
+                    var pageNo = getParameter('pno');
+                    if(!pageNo){
+                        pageNo = 1;
+                    }
+                    //初始化分页控件
+                    //有些参数是可选的，比如lang，若不传有默认值
+                    kkpager.init({
+                        pno : pageNo,
+                        //总页码
+                        total : totalPage,
+                        //总数据条数
+                        totalRecords : totalRecords,
+                        //链接前部
+                        hrefFormer : 'pagination',
+                        //链接尾部
+                        hrefLatter : '.html',
+                        getLink : function(n){
+                            return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                        },
+                        lang : {
+                            prePageText : '上一页',
+                            nextPageText : '下一页',
+                            totalPageBeforeText : '共',
+                            totalPageAfterText : '页',
+                            totalRecordsAfterText : '条数据',
+                            gopageBeforeText : '转到',
+                            gopageButtonOkText : '确定',
+                            gopageAfterText : '页',
+                            buttonTipBeforeText : '第',
+                            buttonTipAfterText : '页'
+                        }
+                    });
+                    //生成
+                    kkpager.generPageHtml();
+                });
+            </script>
+        </div>
+        -->
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+        copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div> 
+</body>
+</html>

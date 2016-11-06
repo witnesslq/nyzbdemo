@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大数据-定制</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html" class="selectweb">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>	
+                     <a href="base.html">知识库</a>			
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain" style="padding:10px">
+    	<div class="configureMainbox" style="background:#F6F6F6; border:0">
+        <div class="neibutton" id="neibtn" style="display:none">
+            <a href="#" onClick="scrolldivout()"><img src="img/fhsj.png" width="147" height="34"/></a>
+        </div>
+        <!--body开始-->
+        <div class="shoppingcart_box kanbox" style="width:1200px; height:760px" id="heightbox">
+			<div class="classbox absolutleft" id="wai">
+                <div class="indexall">
+                	<div class="indexlefttitle2">
+                        <span class="indexlefttitleh1">专业大数据分析系统</span>
+                        &nbsp;&nbsp;&nbsp;专业大数据分析系统用于帮您对作物，土壤，种业等数据进行专业图形化分析。
+                    </div>
+                    <ul>
+                        <li class="mianfei">
+                            <a href="javascript:void(0)" onClick="scrolldiv()"><img src="img/zl/zwbh.jpg"  width="320" height="140"/></a>
+                            <h3><a href="javascript:void(0)" onClick="scrolldiv()">植物保护数据</a></h3>
+                            <span>
+                                <table>
+                                    <tr>
+                                        <td>病虫害发生综合数据</td>
+                                        <td>病虫害防治方法数据</td>
+                                    </tr>
+                                    <tr>
+                                         <td>农药使用量数据</td>
+                                         <td>农药施用成本数据</td>
+                                    </tr>
+                                    <tr>
+                                        <td>农药残留数据</td>
+                                        <td>农药使用知识数据</td>
+                                    </tr>
+                                </table>
+                            </span>
+                        </li>
+                        <li class="weigou">
+                            <a href="javascript:void(0)"  onClick="openwindall(1)"><img src="img/zl/zwzy.jpg"  width="320" height="140"/></a>
+                            <h3><a href="javascript:void(0)"  onClick="openwindall(1)">作物种业数据</a></h3>
+                            <span>
+                                <table>
+                                    <tr>
+                                        <td>种子品种保护数据</td>
+                                        <td>种子生产经营企业数据</td>
+                                    </tr>
+                                    <tr>
+                                         <td>种子知识数据</td>
+                                         <td>种子出苗率/发芽率数据</td>
+                                    </tr>
+                                    <tr>
+                                        <td>种子繁育调查数据</td>
+                                        <td>种子田间纯度鉴定数据</td>
+                                    </tr>
+                                </table>
+                            </span>
+                        </li>
+                        <li class="weigou">
+                            <a href="javascript:void(0)"  onClick="openwindall(1)"><img src="img/zl/zp.jpg"  width="320" height="140"/></a>
+                            <h3><a href="javascript:void(0)"  onClick="openwindall(1)">作物栽培数据</a></h3>
+                            <span>
+                                <table>
+                                    <tr>
+                                        <td>苗情田间考察数据</td>
+                                        <td>田间管理/储藏技术数据</td>
+                                    </tr>
+                                    <tr>
+                                         <td>作物花卉培育方法数据</td>
+                                          <td>农机使用技术资料</td>
+                                    </tr>
+                                    <tr>
+                                        <td>农作物产量数据数据</td>
+                                    </tr>
+                                </table>
+                            </span>
+                        </li>
+                        <li class="weigou">
+                            <a href="javascript:void(0)"  onClick="openwindall(1)"><img src="img/zl/tr.jpg"  width="320" height="140"/></a>
+                            <h3><a href="javascript:void(0)"  onClick="openwindall(1)">土壤肥料数据</a></h3>
+                            <span>
+                                <table>
+                                    <tr>
+                                        <td>土壤墒情监测数据</td>
+                                        <td>作物肥效试验数据</td>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                         <td>肥料施用量数据</td>
+                                         <td>测土配方数据</td>
+                                    </tr>
+                                    <tr>
+                                    	<td>肥料质量检查数据</td>
+                                        
+                                        <td>肥料施用技术数据</td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="2">肥料市场供需情况数据</td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="2">土壤养分和环境质量监测数据</td>
+                                    </tr>
+                                </table>
+                            </span>
+                        </li>
+                        <li class="weigou">
+                            <a href="javascript:void(0)"  onClick="openwindall(1)"><img src="img/zl/jg.jpg"  width="320" height="140"/></a>
+                            <h3><a href="javascript:void(0)"  onClick="openwindall(1)">市场监管数据</a></h3>
+                            <span>
+                                <table>
+                                    <tr>
+                                        <td>农资违规情况数据</td>
+                                        <td>农资企业诚信经营数据</td>
+                                    </tr>
+                                    <tr>
+                                        <td>种苗检疫违规数据</td>
+                                        <td>农资市场产品流通数据</td>
+                                    </tr>
+                                    <tr>
+                                        <td>农药行业标准数据</td>
+                                        <td>农资企业农资产品追溯数据</td>
+                                    </tr>
+                                </table>
+                            </span>
+                        </li>
+                        <li class="weigou">
+                            <a href="javascript:void(0)"  onClick="openwindall(1)"><img src="img/zl/jyy.jpg"  width="320" height="140"/></a>
+                            <h3><a href="javascript:void(0)"  onClick="openwindall(1)">植物疫情数据</a></h3>
+                            <span>
+                                <table>
+                                    <tr>
+                                        <td>有害生物数据</td>
+                                        <td>植物疫情监测数据</td>
+                                    </tr>
+                                </table>
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="nei" class="absolutright">
+            	<div class="indexleft" style="width:100%">
+                	<div class="indexlefttitle">
+                        <span class="indexlefttitleh1">水稻稻飞虱专题</span>
+                    </div>
+                    <div class="bcjs" style="border:0">
+                    	<a href="product.html"><img src="img/zl/dfs.jpg" width="190" height="110"/></a><a href="product.html">稻飞虱，昆虫纲半翅目(Homoptera)飞虱科(Delphacidae)害虫。俗名火蠓虫。以刺吸植株汁液危害水稻等作物。常见种类有褐飞虱（Nilaparvata lugens）、白背飞虱(Sogatella furcifera)和灰飞虱(Laodelphax striatellus)。稻飞虱属同翅目飞虱科。危害水稻的主要有褐飞虱、白背飞虱和灰飞虱三种。危害较重的是褐飞虱和白背飞虱，早稻前期以白背飞虱为主，后期以褐飞虱为主；中晚稻以褐飞虱为主。灰飞虱很少直接成灾，但能传播稻、麦、玉米等作物的病毒。</a>
+                        <button onClick="gotoplay('product.html')" class="floatright" style="margin-top:20px">查看专题详情</button>
+                    </div>
+                	<div class="clear"></div>
+                	<div class="indexlefttitle">
+                        <span class="indexlefttitleh1">马铃薯晚疫病专题</span>
+                    </div>
+                    <div class="bcjs" style="border:0">
+                    	<a href="product.html"><img src="img/zl/wyb.jpg" width="190" height="110"/></a><a href="product.html">马铃薯晚疫病（Potato Late Blight）由致病疫霉引起，导致马铃薯茎叶死亡和块茎腐烂的一种毁灭性卵菌病害。叶片染病先在叶尖或叶缘生水浸状绿褐色斑点，病斑周围具浅绿色晕圈，湿度大时病斑迅速扩大，呈褐色，并产生一圈白霉，即孢囊梗和孢子囊，尤以叶背最为明显；干燥时病斑变褐干枯，质脆易裂，不见白霉，且扩展速度减慢。</a><button onClick="gotoplay('product.html')" class="floatright" style="margin-top:20px">查看专题详情</button>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="indexlefttitle">
+                        <span class="indexlefttitleh1">马铃薯晚疫病专题</span>
+                    </div>
+                    <div class="bcjs" style="border:0">
+                    	<a href="product.html"><img src="img/zl/wyb.jpg" width="190" height="110"/></a><a href="product.html">马铃薯晚疫病（Potato Late Blight）由致病疫霉引起，导致马铃薯茎叶死亡和块茎腐烂的一种毁灭性卵菌病害。叶片染病先在叶尖或叶缘生水浸状绿褐色斑点，病斑周围具浅绿色晕圈，湿度大时病斑迅速扩大，呈褐色，并产生一圈白霉，即孢囊梗和孢子囊，尤以叶背最为明显；干燥时病斑变褐干枯，质脆易裂，不见白霉，且扩展速度减慢。</a><button onClick="gotoplay('product.html')" class="floatright" style="margin-top:20px">查看专题详情</button>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="indexlefttitle">
+                        <span class="indexlefttitleh1">马铃薯晚疫病专题</span>
+                    </div>
+                    <div class="bcjs" style="border:0">
+                    	<a href="product.html"><img src="img/zl/wyb.jpg" width="190" height="110"/></a><a href="product.html">马铃薯晚疫病（Potato Late Blight）由致病疫霉引起，导致马铃薯茎叶死亡和块茎腐烂的一种毁灭性卵菌病害。叶片染病先在叶尖或叶缘生水浸状绿褐色斑点，病斑周围具浅绿色晕圈，湿度大时病斑迅速扩大，呈褐色，并产生一圈白霉，即孢囊梗和孢子囊，尤以叶背最为明显；干燥时病斑变褐干枯，质脆易裂，不见白霉，且扩展速度减慢。</a><button onClick="gotoplay('product.html')" class="floatright" style="margin-top:20px">查看专题详情</button>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="indexlefttitle">
+                        <span class="indexlefttitleh1">马铃薯晚疫病专题</span>
+                    </div>
+                    <div class="bcjs" style="border:0">
+                    	<a href="product.html"><img src="img/zl/wyb.jpg" width="190" height="110"/></a><a href="product.html">马铃薯晚疫病（Potato Late Blight）由致病疫霉引起，导致马铃薯茎叶死亡和块茎腐烂的一种毁灭性卵菌病害。叶片染病先在叶尖或叶缘生水浸状绿褐色斑点，病斑周围具浅绿色晕圈，湿度大时病斑迅速扩大，呈褐色，并产生一圈白霉，即孢囊梗和孢子囊，尤以叶背最为明显；干燥时病斑变褐干枯，质脆易裂，不见白霉，且扩展速度减慢。</a><button onClick="gotoplay('product.html')" class="floatright" style="margin-top:20px">查看专题详情</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            
+        </div>
+        <!--body结束-->
+        <div class="clear"></div>
+        </div>
+	</div>
+    <!--登录框开始-->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document" style="width:280px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">请登录..</h4>
+          </div>
+          <div class="modal-body uesr-dlk">
+            <img src="img/user/dx2.png" width="150" height="150"/>
+            <table>
+                <tr>
+                    <td>账号：</td>
+                    <td><input type="text" class="form-control"/></td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td><input type="password" class="form-control" /></td>
+                </tr>
+            </table>
+          </div>
+          <div class="modal-footer" style="text-align:center">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onClick="sign()">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--bototm-->
+    <div class="configureBottom">
+       copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div> 
+</body>
+</html>

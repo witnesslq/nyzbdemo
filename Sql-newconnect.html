@@ -1,0 +1,234 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>金禾植保信息大数据</title>
+<!-- InstanceEndEditable -->
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html" class="selectweb">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>	
+                     <a href="base.html">知识库</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain" style="padding:20px">
+    	<div class="configureMainbox">
+		<!-- InstanceBeginEditable name="mybody" -->
+		<div class="configureContenttitlebox">
+        	<div class="configureContentlefttitle floatleft">
+            	<img src="img/menutitle.jpg"/> 功能菜单
+            </div>
+            <div class="configureContentrighttitle floatleft">
+            	<span class="absoluteTitle">添加数据库链接</span>
+            </div>
+        </div>
+        <div class="configureContentmainbox">
+        	<div class="configureContentleftmain">
+            	<ul>
+                	<li><a href="Sql-connect.html" class="selectleftmenu">数据库链接</a></li>
+                    <li><a href="Sql-configure.html">数据源配置</a></li>
+                    <li><a href="Sql-assembly.html">组件配置</a></li>
+                    <li><a href="Sql-exhibition.html">组件展示</a></li>
+                    <li><a href="Sql-base.html">知识库管理</a></li>
+                </ul>
+            </div>
+            <div class="configureContentrightmain biglineheight">
+                <table style="width:500px; margin:0 auto">
+                   <tbody>
+                        <tr>
+                            <td width="90" align="right">数据库名称： </td>
+                            <td><input type="text" class="form-control"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">数据库类型： </td>
+                            <td>
+                            	<select class="form-control">
+                                	<option>mysql</option>
+                                    <option>sqlsever</option>
+                                    <option>oracle</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">数据库链接： </td>
+                            <td><input type="text" class="form-control"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">用户名： </td>
+                            <td><input type="text" class="form-control"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">密码： </td>
+                            <td><input type="text" class="form-control"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">状态： </td>
+                            <td>
+                            	<select class="form-control">
+                                	<option>启用</option>
+                                    <option>禁用</option>
+                                </select>
+                            </td>
+                        </tr>
+                   </tbody>
+                </table>
+                <div class="Contentbottommenu">
+                	<button class="btn btn-default" onClick="alert('连接测试成功！')">测试连接</button>
+                    <button class="btn btn-success" onClick="gotoplay('Sql-connect.html')">确定</button>
+                    <button class="btn btn-default" onClick="gotoplay('Sql-connect.html')">取消</button>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    	<!--时间选择器
+    	<input type="text" class="form-control Wdate displayib" style="width:110px" onclick="WdatePicker()" value="2016-01-01">
+        -->
+        
+    	<!--表格
+        <table class="table table-striped table-hover table-bordered">
+        	<thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        -->
+        
+        
+    	<!--弹出框
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">标题</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+        
+        <!--分页
+        <div style="clear:both; height:50px">
+            <div id="kkpager"></div>
+            <script type="text/javascript">
+                function getParameter(name) { 
+                    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+                    var r = window.location.search.substr(1).match(reg); 
+                    if (r!=null) return unescape(r[2]); return null;
+                }
+                
+                //init
+                $(function(){
+                    var totalPage = 20;
+                    var totalRecords = 390;
+                    var pageNo = getParameter('pno');
+                    if(!pageNo){
+                        pageNo = 1;
+                    }
+                    //初始化分页控件
+                    //有些参数是可选的，比如lang，若不传有默认值
+                    kkpager.init({
+                        pno : pageNo,
+                        //总页码
+                        total : totalPage,
+                        //总数据条数
+                        totalRecords : totalRecords,
+                        //链接前部
+                        hrefFormer : 'pagination',
+                        //链接尾部
+                        hrefLatter : '.html',
+                        getLink : function(n){
+                            return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                        },
+                        lang : {
+                            prePageText : '上一页',
+                            nextPageText : '下一页',
+                            totalPageBeforeText : '共',
+                            totalPageAfterText : '页',
+                            totalRecordsAfterText : '条数据',
+                            gopageBeforeText : '转到',
+                            gopageButtonOkText : '确定',
+                            gopageAfterText : '页',
+                            buttonTipBeforeText : '第',
+                            buttonTipAfterText : '页'
+                        }
+                    });
+                    //生成
+                    kkpager.generPageHtml();
+                });
+            </script>
+        </div>
+        -->
+        <!-- InstanceEndEditable -->
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+        copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div>
+</body>
+<!-- InstanceEnd --></html>

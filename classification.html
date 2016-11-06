@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大数据-展示</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html" class="selectweb">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain">
+    	<div class="configureMainbox">	
+            <div class="configureContenttitlebox">
+                <div class="configureContentlefttitle floatleft">
+                    <img src="img/menutitle.jpg"/> 功能菜单
+                </div>
+                <div class="configureContentrighttitle floatleft">
+                    <span class="absoluteTitle">组件分组</span>
+                </div>
+                <button class="btn btn-success floatright" onclick="gotoplay('classification3.html')" style="margin:20px 20px">新建专题</button>
+            </div>
+            <div class="configureContentmainbox">
+                <div class="configureContentleftmain">
+                    <ul>
+                        <li><a href="Sql-connect.html">数据库链接</a></li>
+                        <li><a href="Sql-configure.html">数据源配置</a></li>
+                        <li><a href="Sql-assembly.html">组件配置</a></li>
+                        <li><a href="Sql-exhibition.html">组件展示</a></li>
+                        <li><a href="classification.html" class="selectleftmenu">组件分组</a></li>
+                        <li><a href="Sql-base.html">知识库管理</a></li>
+                    </ul>
+                </div>
+                <div class="configureContentrightmain" style="padding-top:20px">
+                	
+                 	<div class="configureContentmainbox" style="padding:10px">
+                         <div class="indexleft" style="width:970px">
+                            <div class="indexlefttitle">
+                                <span class="indexlefttitleh1">水稻稻飞虱专题</span>
+                            </div>
+                            <div class="bcjs" style="border:0; width:970px">
+                                <a href="product.html"><img src="img/zl/dfs.jpg" width="190" height="110"/></a><a href="product.html">稻飞虱，昆虫纲半翅目(Homoptera)飞虱科(Delphacidae)害虫。俗名火蠓虫。以刺吸植株汁液危害水稻等作物。常见种类有褐飞虱（Nilaparvata lugens）、白背飞虱(Sogatella furcifera)和灰飞虱(Laodelphax striatellus)。稻飞虱属同翅目飞虱科。危害水稻的主要有褐飞虱、白背飞虱和灰飞虱三种。危害较重的是褐飞虱和白背飞虱，早稻前期以白背飞虱为主，后期以褐飞虱为主；中晚稻以褐飞虱为主。灰飞虱很少直接成灾，但能传播稻、麦、玉米等作物的病毒。</a>
+                                <span class="floatright">
+                                    <button onClick="gotoplay('classification3.html')"  style="margin-top:10px">修改专题信息</button>
+                                    <button onClick="gotoplay('classification2.html')" style="margin-top:10px">修改子菜单</button>&nbsp;
+                                </span>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="indexlefttitle">
+                                <span class="indexlefttitleh1">马铃薯晚疫病专题</span>
+                            </div>
+                            <div class="bcjs" style="border:0; width:970px">
+                                <a href="product.html"><img src="img/zl/wyb.jpg" width="190" height="110"/></a><a href="product.html">马铃薯晚疫病（Potato Late Blight）由致病疫霉引起，导致马铃薯茎叶死亡和块茎腐烂的一种毁灭性卵菌病害。叶片染病先在叶尖或叶缘生水浸状绿褐色斑点，病斑周围具浅绿色晕圈，湿度大时病斑迅速扩大，呈褐色，并产生一圈白霉，即孢囊梗和孢子囊，尤以叶背最为明显；干燥时病斑变褐干枯，质脆易裂，不见白霉，且扩展速度减慢。</a>
+                                <span class="floatright">
+                                    <button onClick="gotoplay('classification3.html')"  style="margin-top:10px">修改专题信息</button>&nbsp;
+                                    <button onClick="gotoplay('classification2.html')" style="margin-top:10px">修改子菜单</button>
+                                </span>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="indexlefttitle">
+                                <span class="indexlefttitleh1">马铃薯晚疫病专题</span>
+                            </div>
+                            <div class="bcjs" style="border:0; width:970px">
+                                <a href="product.html"><img src="img/zl/wyb.jpg" width="190" height="110"/></a><a href="product.html">马铃薯晚疫病（Potato Late Blight）由致病疫霉引起，导致马铃薯茎叶死亡和块茎腐烂的一种毁灭性卵菌病害。叶片染病先在叶尖或叶缘生水浸状绿褐色斑点，病斑周围具浅绿色晕圈，湿度大时病斑迅速扩大，呈褐色，并产生一圈白霉，即孢囊梗和孢子囊，尤以叶背最为明显；干燥时病斑变褐干枯，质脆易裂，不见白霉，且扩展速度减慢。</a>
+                                <span class="floatright">
+                                    <button onClick="gotoplay('classification3.html')"  style="margin-top:10px">修改专题信息</button>&nbsp;
+                                    <button onClick="gotoplay('classification2.html')" style="margin-top:10px">修改子菜单</button>
+                                </span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>   
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+        copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div>
+</body>
+</html>

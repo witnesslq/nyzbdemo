@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>预览报告</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html" class="selectweb">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html">数据运营平台</a>		
+                     <a href="#">云数据开放平台</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain" style="padding:20px">
+    	<div class="configureMainbox">
+        <!--body开始-->
+            <div class="shoppingcart_box">
+                <div class="qyfwtitle">
+                	<div class="qyfwtitleh1">[网聚数据力量 把握企业发展 审视企业风险 借力信用评估]</div>
+                    <div class="qyfwtitleh3">全面的企业全景信息、专业的风险评估模型、实时的更新监控播报、个性的服务定制模式</div>
+                </div>
+                <div class="qyfwsm2">
+                	<ul>
+                    	<li>
+                        	<a href="#" class="qyfwimg" onClick="openwindall(1)"></a>
+                            <a href="#" onClick="openwindall(1)">基本公告</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="qyfwimg_2" onClick="openwindall(1)"></a>
+                            <a href="#" onClick="openwindall(1)">信用报告</a>
+                        </li>
+                        <li>
+                        	<a href="#" class="qyfwimg_3" onClick="openwindall(1)"></a>
+                            <a href="#" onClick="openwindall(1)">深度报告</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear" style="text-align:center; padding-bottom:20px">
+                	企业定制报告，帮助您考察企业全景信息、了解企业信用状况、实时监测企业变化
+                </div>
+                <div style="background:#fafafa; height:400px" class="qyfwsm">
+                	<img src="img/wmtg.jpg" width="805" height="168"/>
+                    <table>
+                    	<tr>
+                        	<td>
+                            	<div style="margin-left:170px">基于专业数据，通过大数据挖掘、整合、分析，建立精确定位标准，洞察受众群体，锁定目标客户。为企业在营销决策提供数据支撑，推动营销，节约成本。</div>
+                            </td>
+                            <td>
+                            	<div style="margin-left:150px">凭借强大的企业信用数据库，基于动态风险评价体系，运用科学严谨的评估方法，对企业的资产力、履约力、信誉度综合评定，为企业履约能力和投标信誉提供衡量依据，发现企业不足和隐患，规避商业交易风险。动营销，节约成本。</div>
+                            </td>
+                            <td>
+                            	<div style="margin-left:140px">引入病毒理论，洞悉客户关联族谱，结合企业财务指标、发展潜力、行业优势等要素，帮助您全面、系统了解企业价值点、获得投资决策信息，提升投资决策的正确性，避免投资失误造成损失。</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        <!--body结束-->
+        <div class="clear"></div>
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+        copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009
+    </div> 
+	<!--弹出框-->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document" style="width:500px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">基本报告样本预览</h4>
+          </div>
+          <div class="modal-body">
+            <img src="img/baogao.bmp"/>
+          </div>
+          <div class="modal-footer" style="text-align:center">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

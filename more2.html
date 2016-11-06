@@ -1,0 +1,386 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>专业报告</title>
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<script type="text/javascript" src="assembly/echarts/echarts-all.js"></script>
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html" class="selectweb">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain">
+    	<div class="configureMainbox" style="background:#F6F6F6; border:0; padding:20px">
+            <div class="neibutton" id="neibtn" style="display:none">
+                <a href="#" onClick="scrolldivout()"><img src="img/fhsj.png" width="147" height="34"/></a>
+            </div>
+            <!--body开始-->
+            <div class="shoppingcart_box kanbox" style="width:1200px">
+            	<div class="search" style="padding-left:50px">
+                	标题：<input type="text" class="form-control" style="width:200px">
+                    分类：<select class="form-control"  style="width:200px">
+                    		<option>病害</option>
+                            <option>虫害</option>
+                            <option>全部</option>
+                    	  </select>
+                    热度：<select class="form-control"  style="width:200px">
+                    		<option>10000以上</option>
+                            <option>5000-9999</option>
+                            <option>2000-5000</option>
+                            <option>500-1000</option>
+                            <option>500以下</option>
+                            <option>全部</option>
+                    	  </select>
+                    发布日期：<select class="form-control"  style="width:200px">
+                    		<option>1个月内</option>
+                            <option>半年内</option>
+                            <option>1年内</option>
+                            <option>3年以上</option>
+                            <option>全部</option>
+                    	  </select>
+                    <button class="btn btn-success">搜索</button>
+                </div>
+            	<div class="indexleft" style="width:100%">
+                    <div class="indexlefttitle searchtitle">
+                        <span class="indexlefttitleh1">符合搜索条件的报告</span>
+                        <span class="floatright">共 <span class="badge">42</span> 篇</span>
+                    </div>
+                    <!--<div class="bcjs">
+                    	<img src="img/zl/dfs.jpg" width="190" height="110"/>稻飞虱，昆虫纲半翅目(Homoptera)飞虱科(Delphacidae)害虫。俗名火蠓虫。以刺吸植株汁液危害水稻等作物。常见种类有褐飞虱（Nilaparvata lugens）、白背飞虱(Sogatella furcifera)和灰飞虱(Laodelphax striatellus)。稻飞虱属同翅目飞虱科。危害水稻的主要有褐飞虱、白背飞虱和灰飞虱三种。危害较重的是褐飞虱和白背飞虱，早稻前期以白背飞虱为主，后期以褐飞虱为主；中晚稻以褐飞虱为主。灰飞虱很少直接成灾，但能传播稻、麦、玉米等作物的病毒。
+                    </div>-->
+                    <div class="indexleft sclist" style="width:100%">
+                        <ul>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">马铃薯晚疫病发生面积报告</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">176198</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">河南省马铃薯晚疫病发生情况</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                <button type="button" class="btn btn-success btn-xs">立刻购买省 $8.88元</button>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">晚疫病预防效果</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">河北省发生马铃薯晚疫病</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">马铃薯晚疫病发生面积报告</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">河南省马铃薯晚疫病发生情况</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">晚疫病预防效果</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">河北省发生马铃薯晚疫病</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">马铃薯晚疫病发生面积报告</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">河南省马铃薯晚疫病发生情况</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">晚疫病预防效果</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <a href="product.html"><img src="img/bg1.png" height="130"></a>
+                                <h3><a href="product.html">河北省发生马铃薯晚疫病</a></h3>
+                                <table>
+                                	<tbody>
+                                        <tr>
+                                            <td>2016-2-15</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>
+                                                热度：<span class="badge">4202</span>
+                                            </td>
+                                        </tr>
+                                	</tbody>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+               		<div class="clear">
+                    
+                    <div style="clear:both; height:50px; padding-right:250px">
+                        <div id="kkpager">&nbsp;每页显示<select style="padding:0px;height:27px;width:60px;display:inline-block; margin:auto 5px auto 5px" class="form-control" onchange="returnoption(this.value)" id="mykkpagerselect"><option value="5">5</option><option value="10" selected="selected">10</option><option value="50">50</option><option value="全部">全部</option></select>条 <span class="disabled">上一页</span><span class="curr">1</span><a href="pagination.html?pno=2" title="第2页">2</a><a href="pagination.html?pno=3" title="第3页">3</a><a href="pagination.html?pno=4" title="第4页">4</a><a href="pagination.html?pno=5" title="第5页">5</a><a href="pagination.html?pno=6" title="第6页">6</a><a href="pagination.html?pno=7" title="第7页">7</a><span>...</span><a href="pagination.html?pno=2" title="下一页">下一页</a><span class="normalsize">共20页&nbsp;/&nbsp;390条数据</span>&nbsp;转到<span id="kkpager_gopage_wrap"><input type="button" id="kkpager_btn_go" onclick="kkpager.gopage()" value="确定"><input type="text" id="kkpager_btn_go_input" onfocus="kkpager.focus_gopage()" onkeypress="if(event.keyCode<48 || event.keyCode>57)return false;" onblur="kkpager.blur_gopage()" value="2"></span>页</div>
+                        <script type="text/javascript">
+                            function getParameter(name) { 
+                                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+                                var r = window.location.search.substr(1).match(reg); 
+                                if (r!=null) return unescape(r[2]); return null;
+                            }
+                            
+                            //init
+                            $(function(){
+                                var totalPage = 20;
+                                var totalRecords = 390;
+                                var pageNo = getParameter('pno');
+                                if(!pageNo){
+                                    pageNo = 1;
+                                }
+                                //初始化分页控件
+                                //有些参数是可选的，比如lang，若不传有默认值
+                                kkpager.init({
+                                    pno : pageNo,
+                                    //总页码
+                                    total : totalPage,
+                                    //总数据条数
+                                    totalRecords : totalRecords,
+                                    //链接前部
+                                    hrefFormer : 'pagination',
+                                    //链接尾部
+                                    hrefLatter : '.html',
+                                    getLink : function(n){
+                                        return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                                    },
+                                    lang : {
+                                        prePageText : '上一页',
+                                        nextPageText : '下一页',
+                                        totalPageBeforeText : '共',
+                                        totalPageAfterText : '页',
+                                        totalRecordsAfterText : '条数据',
+                                        gopageBeforeText : '转到',
+                                        gopageButtonOkText : '确定',
+                                        gopageAfterText : '页',
+                                        buttonTipBeforeText : '第',
+                                        buttonTipAfterText : '页'
+                                    }
+                                });
+                                //生成
+                                kkpager.generPageHtml();
+                            });
+                        </script>
+                    </div>
+                    
+                    
+                </div>
+             </div>
+         </div>	
+            <!--body结束-->
+         <div class="clear"></div>
+      </div>
+    </div>
+    <!--登录框开始-->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document" style="width:280px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">请登录..</h4>
+          </div>
+          <div class="modal-body uesr-dlk">
+            <img src="img/user/dx2.png" width="150" height="150"/>
+            <table>
+                <tr>
+                    <td>账号：</td>
+                    <td><input type="text" class="form-control"/></td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td><input type="password" class="form-control" /></td>
+                </tr>
+            </table>
+          </div>
+          <div class="modal-footer" style="text-align:center">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onClick="sign()">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--bototm-->
+    <div class="configureBottom">
+        copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div> 
+</body>
+</html>

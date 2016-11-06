@@ -1,0 +1,353 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/index.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>金禾植保信息大数据</title>
+<!-- InstanceEndEditable -->
+<!--基础样式-->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--基础javascritp-->
+<script src="javascript/jquery-1.11.0.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/js.js"></script>
+<!--组件包-->
+<!--1.分页-->
+<script type="text/javascript" src="assembly/pager/kkpager.js"></script>
+<link rel="stylesheet" type="text/css" href="assembly/pager/kkpager.css" />
+<!--2.时间控件-->
+<script type="text/javascript" src="assembly/My97DatePicker/WdatePicker.js"></script>
+<!--组件包end-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<!--top-->
+	<div class="dataTop">
+    	<div class="configureBox">
+    		<img src="img/logo2.jpg" alt="logo" width="457" height="55"/>
+            <div class="dataTopmenu floatright">
+            	<div class="clear">
+                	<div class="dataUser floatleft">
+                        <div id="sign" style="display:none">
+                            <a href="#">注册</a> <span>|</span> 
+                            <a href="#" onClick="openwindall(1)">登录</a>	
+                        </div>
+                        <div id="signUser">
+                            <a href="collection.html"><img src="img/user/dx.jpg" width="40" height="40"/>
+                            王学锋</a>
+                            <a href="#">退出</a> <a href="introduce.html">平台介绍</a>
+                        </div>
+                    </div>
+                </div>
+            	<div class="clear">
+                	 <a href="index.html">首页</a>
+                     <a href="product2.html">专业大数据分析系统</a>
+                     <a href="collection.html">大数据分析能力开放系统</a>	
+                     <a href="Sql-connect.html" class="selectweb">数据运营平台</a>		
+                     <a href="openplatform.html">云数据开放平台</a>	
+                     <a href="base.html">知识库</a>		
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="configureMain" style="padding:20px">
+    	<div class="configureMainbox">
+		<!-- InstanceBeginEditable name="mybody" -->
+		<div class="configureContenttitlebox">
+        	<div class="configureContentlefttitle floatleft">
+            	<img src="img/menutitle.jpg"/> 功能菜单
+            </div>
+            <div class="configureContentrighttitle floatleft">
+            	<span class="absoluteTitle">添加组件</span>
+            </div>
+        </div>
+        <div class="configureContentmainbox">
+        	<div class="configureContentleftmain">
+            	<ul>
+                	<li><a href="Sql-connect.html">数据库链接</a></li>
+                    <li><a href="Sql-configure.html">数据源配置</a></li>
+                    <li><a href="Sql-assembly.html" class="selectleftmenu">组件配置</a></li>
+                    <li><a href="Sql-exhibition.html">组件展示</a></li>
+                    <li><a href="Sql-base.html">知识库管理</a></li>
+                </ul>
+            </div>
+            <div class="configureContentrightmain biglineheight">
+                <table style="width:800px; margin:0 auto">
+                   		<tbody>
+                            <tr>
+                                <td width="90" align="right">标题： </td>
+                                <td><input type="text" class="form-control"/></td>
+                            </tr>
+                            <tr>
+                                <td align="right">数据源： </td>
+                                <td>
+                                    <select class="form-control">
+                                        <option>192.168.1.19:8080/jinheteache/mysql/zhibaotong/</option>
+                                        <option>192.168.2.23:8080/mysql/jinhe</option>
+                                        <option>192.168.2.49:8089/sql/</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">组件类型： </td>
+                                <td>
+                                    <select class="form-control" onChange="gototab(this)">
+                                        <option value="1">散点图</option>
+                                        <option value="2">折线图</option>
+                                        <option value="3">柱状图</option>
+                                        <option value="4">地图</option>
+                                        <option value="5">饼图</option>
+                                        <option value="6">K线图</option>
+                                        <option value="7">箱线图</option>
+                                        <option value="8">热力图</option>
+                                        <option value="9">关系图</option>
+                                        <option value="10">矩形树图</option>
+                                        <option value="11">平行坐标</option>
+                                        <option value="12">桑基图</option>
+                                        <option value="13">漏斗图</option>
+                                        <option value="14">仪表盘</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                	<div id="hidebox">
+                                        <ul class="myRadiobox" id="imgbox1">
+                                            <li><input type="radio" name="radio" id="myradio1"/><a href="javascript:void(0)" onClick="selectradio(1)"><img src="img/assemblyimg/sdt-1.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio2"/><a href="javascript:void(0)" onClick="selectradio(2)"><img src="img/assemblyimg/sdt-2.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio3"/><a href="javascript:void(0)" onClick="selectradio(3)"><img src="img/assemblyimg/sdt-3.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio4"/><a href="javascript:void(0)" onClick="selectradio(4)"><img src="img/assemblyimg/sdt-4.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio5"/><a href="javascript:void(0)" onClick="selectradio(5)"><img src="img/assemblyimg/sdt-5.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio6"/><a href="javascript:void(0)" onClick="selectradio(6)"><img src="img/assemblyimg/sdt-6.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio7"/><a href="javascript:void(0)" onClick="selectradio(7)"><img src="img/assemblyimg/sdt-7.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio8"/><a href="javascript:void(0)" onClick="selectradio(7)"><img src="img/assemblyimg/sdt-8.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio9"/><a href="javascript:void(0)" onClick="selectradio(7)"><img src="img/assemblyimg/sdt-9.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio10"/><a href="javascript:void(0)" onClick="selectradio(7)"><img src="img/assemblyimg/sdt-10.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio11"/><a href="javascript:void(0)" onClick="selectradio(7)"><img src="img/assemblyimg/sdt-11.png" width="160" height="120"/></a></li>
+                                            <li><input type="radio" name="radio" id="myradio12"/><a href="javascript:void(0)" onClick="selectradio(7)"><img src="img/assemblyimg/sdt-12.png" width="160" height="120"/></a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                      </tbody>
+               	 </table>
+              <div class="Contentbottommenu">
+                    <table style="width:900px; margin:0 auto" class="datatable">
+                       <tbody>
+                            <tr>
+                                <td align="left" width="60">数据： </td>
+                                <td><button class="btn btn-success floatleft cfbtn" onClick="addmytr()">+ 添加数据列</button></td>
+                                <td></td>
+                            </tr>
+                            <tr id="mytr">
+                                <td colspan="2">
+                                    <select class="form-control" style="width:300px">
+                                        <option>请选择数据列</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control displayib" placeholder="请输入数据名称" style="width:550px"/></td>
+                                <td><a href="#">删除</a></td>
+                            </tr>
+                            <script>
+								function addmytr(){
+								$("#mytr").after("<tr><td colspan='2'><select class='form-control' style='width:300px'><option>请选择数据列</option></select></td><td><input type='text' class='form-control displayib' placeholder='请输入数据名称' style='width:550px'/></td><td><a href='javascript:void(0)' onclick='remtr(this)'>删除</a></td></tr>")
+								}
+							</script>
+                       </tbody>
+                    </table>
+                    <table style="width:900px; margin:0 auto" class="datatable">
+                       <tbody>
+                            <tr>
+                                <td width="60" align="left">参数： </td>
+                                <td><button class="btn btn-success floatleft cfbtn" onClick="addmytr2()">+ 添加数据列</button></td>
+                                <td></td>
+                            </tr>
+                       </tbody>
+                    </table>
+                    <table style="width:900px; margin:0 auto" class="datatable">
+                       <tbody>
+                            <tr id="mytr2">
+                                <td>
+                                	<select class="form-control" style="width:80px">
+                                        <option>并且</option>
+                                        <option>或者</option>
+                                        <option> </option>
+                                    </select>
+                                </td>
+                                <td>
+                                	<select class="form-control" style="width:60px">
+                                        <option>(</option>
+                                        <option> </option>
+                                    </select>
+                                </td> 
+                                <td>
+                                    <select class="form-control" style="width:160px">
+                                        <option>请选择数据列</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" placeholder="请输入参数名" style="width:170px"></td>
+                                <td>
+                                    <select class="form-control" style="width:80px">
+                                        <option>关系</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" placeholder="请输入参数值" style="width:110px"></td>
+                                <td>
+                                	<select class="form-control" style="width:60px">
+                                        <option>)</option>
+                                        <option> </option>
+                                    </select>
+                                </td>
+                                <td>
+                                	<select class="form-control" style="width:110px">
+                                        <option>参数类型</option>
+                                        <option> </option>
+                                    </select>
+                                </td>
+                                <td><a href="#">删除</a></td>
+                            </tr>
+                            <script>
+								function addmytr2(){
+								$("#mytr2").after("<tr><td><select class='form-control' style='width:80px'><option>并且</option><option>或者</option><option> </option></select></td><td><select class='form-control' style='width:60px'><option>(</option><option> </option></select></td> <td><select class='form-control' style='width:160px'><option>请选择数据列</option></select></td><td><input type='text' class='form-control' placeholder='请输入参数名' style='width:170px'></td><td><select class='form-control' style='width:80px'><option>关系</option></select></td><td><input type='text' class='form-control' placeholder='请输入参数值' style='width:110px'></td><td><select class='form-control' style='width:60px'><option>)</option><option> </option></select></td><td><select class='form-control' style='width:110px'><option>参数类型</option><option> </option></select></td><td><a href='javascript:void(0)' onclick='remtr(this)'>删除</a></td></tr>")}
+							</script>
+                       </tbody>
+                    </table>
+                </div>
+                <div class="Contentbottommenu">
+                    <table style="width:900px; margin:0 auto">
+                       <tbody>
+                            <tr>
+                                <td width="70" align="right">组件说明： </td>
+                                <td>
+                                	<textarea class="form-control" style="height:100px"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="70" align="right">标签： </td>
+                                <td><input type="text" class="form-control" placeholder="请输入参数名"></td>
+                            </tr>
+                       </tbody>
+                    </table>
+                </div>
+                <div class="Contentbottommenu">
+                 	<button class="btn btn-default" onClick="gotoplay('exhibition.html')">预览</button>
+                    <button class="btn btn-success" onClick="gotoplay('Sql-assembly.html')">确定</button>
+                    <button class="btn btn-default" onClick="gotoplay('Sql-assembly.html')">取消</button>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    	<!--时间选择器
+    	<input type="text" class="form-control Wdate displayib" style="width:110px" onclick="WdatePicker()" value="2016-01-01">
+        -->
+        
+    	<!--表格
+        <table class="table table-striped table-hover table-bordered">
+        	<thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        -->
+        
+        
+    	<!--弹出框
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">标题</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+        
+        <!--分页
+        <div style="clear:both; height:50px">
+            <div id="kkpager"></div>
+            <script type="text/javascript">
+                function getParameter(name) { 
+                    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+                    var r = window.location.search.substr(1).match(reg); 
+                    if (r!=null) return unescape(r[2]); return null;
+                }
+                
+                //init
+                $(function(){
+                    var totalPage = 20;
+                    var totalRecords = 390;
+                    var pageNo = getParameter('pno');
+                    if(!pageNo){
+                        pageNo = 1;
+                    }
+                    //初始化分页控件
+                    //有些参数是可选的，比如lang，若不传有默认值
+                    kkpager.init({
+                        pno : pageNo,
+                        //总页码
+                        total : totalPage,
+                        //总数据条数
+                        totalRecords : totalRecords,
+                        //链接前部
+                        hrefFormer : 'pagination',
+                        //链接尾部
+                        hrefLatter : '.html',
+                        getLink : function(n){
+                            return this.hrefFormer + this.hrefLatter + "?pno="+n;
+                        },
+                        lang : {
+                            prePageText : '上一页',
+                            nextPageText : '下一页',
+                            totalPageBeforeText : '共',
+                            totalPageAfterText : '页',
+                            totalRecordsAfterText : '条数据',
+                            gopageBeforeText : '转到',
+                            gopageButtonOkText : '确定',
+                            gopageAfterText : '页',
+                            buttonTipBeforeText : '第',
+                            buttonTipAfterText : '页'
+                        }
+                    });
+                    //生成
+                    kkpager.generPageHtml();
+                });
+            </script>
+        </div>
+        -->
+        <!-- InstanceEndEditable -->
+        </div>
+	</div>
+    <!--bototm-->
+    <div class="configureBottom">
+        copyright@2011 JinheTech.ALL rights reserved.版权所有金禾天成 京ICP备11009730
+    </div>
+</body>
+<!-- InstanceEnd --></html>
